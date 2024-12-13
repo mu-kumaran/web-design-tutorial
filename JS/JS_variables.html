@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Variables</title>
+	<link rel="icon" type="text/icon" href="images/JS_logo1.png">
+	<script type="text/javascript">
+		var k1=100;
+		let k2=100;
+		const k3=100;
+		k1=k1+10;
+		console.log("var k1:"+k1);
+		k2=k2+10;
+		console.log("Var k2:"+k2);
+		/* k3=k3+10; throws an error since k3 is an constant*/
+		if (true) 
+		{
+			var k4=200; /* var - global variable*/
+			let k5=200; /* let - local variable*/
+			const k6=200; /* const - local variable*/
+		}
+		console.log("Global var, k4:"+k4);
+		/*console.log("Global var, k5:"+k5); 
+		console.log("Global var, k6:"+k6);  - throws an error bcoz of local scope*/
+	</script>
+	<style type="text/css">
+		#img1
+		{
+			height: 450px;
+			width: 800px;
+			margin-top: 40px;
+		}
+		div
+		{	
+			margin-top: 80px;
+			text-align: center;
+			align-content: space-around;
+		}
+	</style>
+</head>
+<body>
+<div id="1">
+	<img id="img1" src="images/JS_logo.png">
+	<h1 id="txt1">"Hello Javascript"</h1>
+</div>
+</body>
+</html>

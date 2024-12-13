@@ -1,0 +1,64 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS getting input from radio buttons</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let opt1 = document.getElementById("n1").checked;
+			console.log(opt1);
+			let opt2 = document.getElementById("n2").checked;
+			console.log(opt2);
+			let opt3 = document.getElementById("n3").checked;
+			console.log(opt3);
+
+			let ans = "Selected gender: ";
+			if(opt1 == true)
+			{
+				ans += document.getElementById("n1").value;
+			}
+			else if(opt2 == true)
+			{
+				ans += document.getElementById("n2").value;
+			}
+			else if(opt3 == true)
+			{
+				ans += document.getElementById("n3").value;
+			}
+			document.getElementById("res").innerHTML = ans; 
+		}
+
+		function disp()
+		{
+			let opt = document.getElementsByName("gen");
+			len = opt.length;
+			console.log(len);
+			console.log(opt[1].value);
+			let ans = "Selected gender: ";
+			for(let i=0;i<len;i++)
+			{
+				console.log(opt[i].checked);
+				if(opt[i].checked == true)
+				{	
+					ans +=  opt[i].value;
+				}
+			}
+			document.getElementById("res1").innerHTML = ans; 
+		}
+
+	</script>
+</head>
+<body>
+	<h2>Getting input from radio buttons</h2>
+	Select Gender: <br><br>
+	<input type="radio" name="gen" value="male" id="n1">Male
+	<input type="radio" name="gen" value="female" id="n2">Female
+	<input type="radio" name="gen" value="others" id="n3">Others
+	<br><br>
+	<input type="button" onclick="disp(),show()" value="show"><br><br>
+	<div id="res"></div><br><br>
+	<div id="res1"></div>
+</body>
+</html>
+

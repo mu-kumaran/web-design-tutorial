@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS popups</title>
+	<script type="text/javascript">
+		function show(){
+			var myName = document.getElementById("name").value;
+			let res = confirm("Are you sure want to display your name?");
+			if (res===true)
+			{
+				alert("Your name: "+myName);
+			}
+			else
+			{
+				alert("Good Bye");
+			}
+		}
+
+		function total(){
+			var k1 = parseInt(prompt("Enter no.1:"));
+			var k2 = parseInt(prompt("Enter no.2:"));
+			var k3=k1+k2;
+			let res = confirm("Are you sure want to display your total?");
+			if (res===true)
+			{
+				alert("Your total: "+k3);
+			}
+			else
+			{
+				alert("Good Bye");
+			}
+
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Popups : (Alert,confirm,prompt)</h1>
+	Name:
+	<input id="name" type="text" name="" placeholder="Enter your name"><br>
+	<button onclick="show()">Click me</button><br><br>
+	<b>Find your total: </b><br>
+	<button onclick="total()">Your total</button><br>
+</body>
+</html>

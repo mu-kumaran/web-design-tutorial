@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>forms</title>
+</head>
+<body>
+	<h1 align="center"><font color="red"><u>Forms</u></font></h1>
+	<form action="form_submission.html" method="post">
+		<label>
+			Enter username:
+			<input type="text" placeholder="Enter username" name="un" size="20" maxlength="10">
+		</label><br>
+		Enter Password:
+		<input type="password" name="pwd" placeholder="Enter your password"><br>
+		12<sup>th</sup> mark:
+		<input type="number" name="mark"><br>
+		DOB:
+		<input type="date" name="dob"><br>
+		Time:
+		<input type="time" name="time"><br>
+		Week:
+		<input type="week" name="week"><br>
+		Gender:
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="Female">Female <br>
+		Courses:
+		<input type="checkbox" name="C1" value="C">C
+		<input type="checkbox" name="C2" value="C++">C++
+		<input type="checkbox" name="C3" value="Java">Java<br><br>
+		Enter address:<br>
+		<textarea rows="8" cols="20"></textarea> <br>
+		Email:
+		<input type="email" name="mail" placeholder="Enter your email"><br>
+		Upload Photo:
+		<input type="file" name="photo"><br>
+		Range:
+		<input type="Range" min="0" max="5"><br><br>
+		Option:<br>
+		<select> /*Select size="10" multiple*/
+			<optgroup label="leave days">
+				<option>Sunday</option>
+				<option>Monday</option>
+				<option>Tuesday</option>
+			</optgroup>
+			<optgroup label="working days">
+				<option>Wednesday</option>
+				<option>Thursday</option>
+				<option>Friday</option>
+				<option>Saturday</option>				
+			</optgroup>			
+		</select><br><br>
+
+		Option1:<br>
+		<select multiple> /*Select size="10" multiple*/
+			<optgroup label="leave days">
+				<option>Sunday</option>
+				<option>Monday</option>
+				<option>Tuesday</option>
+			</optgroup>
+			<optgroup label="working days">
+				<option>Wednesday</option>
+				<option>Thursday</option>
+				<option>Friday</option>
+				<option>Saturday</option>				
+			</optgroup>			
+		</select><br>
+		<br>
+
+		Option 2:<br>
+		<select size="10" multiple> /*Select size="10" multiple*/
+			<optgroup label="leave days">
+				<option>Sunday</option>
+				<option>Monday</option>
+				<option>Tuesday</option>
+			</optgroup>
+			<optgroup label="working days">
+				<option>Wednesday</option>
+				<option>Thursday</option>
+				<option>Friday</option>
+				<option>Saturday</option>				
+			</optgroup>			
+		</select><br>
+		<br><br>
+		<!---buttons---->
+		<button>Submit</button>
+		<button type="reset">Reset</button>
+		<button><img src="D:/Manoj/HTML/images/frogpicture.jpg" width="100" height="30">Submit
+		</button>
+
+	</form>
+</body>
+</html>

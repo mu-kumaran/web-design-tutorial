@@ -1,0 +1,26 @@
+h1{
+	color: blue;
+	background-color: yellow;
+	border: 5px solid green;
+}
+
+h2{
+	color: red;
+	background-color: pink;
+	border: 5px solid blue;
+}
+
+body{
+	background-color: lightblue;
+}
+
+p{
+	font-size: 40px;
+	color: rgba(255, 0, 255, 0.5);
+	border: 3px dashed red;
+	border-radius: 20px;
+	word-spacing: 5px;
+	letter-spacing: 5px;
+	font-weight: bolder;
+	padding-left: 10px;
+}

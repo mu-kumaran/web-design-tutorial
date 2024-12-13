@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Event Handling</title>
+	<script type="text/javascript">
+		function dis()
+		{
+			var opt=document.getElementsByTagName("option");
+			console.log(opt);
+			console.log(opt.length);
+			document.getElementById("res").innerHTML = "Selected months: "+"<br>";
+			var months="";
+			for (var i = 0; i < opt.length; i++) 
+			{
+				if (opt[i].selected === true)
+				{
+					months=months+opt[i].value+",";
+					
+				}
+			}
+			document.getElementById("res1").innerHTML=months;
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Event handling - getElementsByTagname</h1>
+	Select month : <br>
+	<select multiple size="10">
+		<option>January</option>
+		<option>February</option>
+		<option>March</option>
+		<option>April</option>
+		<option>May</option>
+		<option>June</option>
+		<option>July</option>
+		<option>August</option>
+		<option>September</option>
+		<option>October</option>
+		<option>November</option>
+		<option>December</option>
+	</select><br>
+	<input type="button" name="" value="Clickme" onclick="dis()"><br>
+	<div id="res"></div>
+	<div id="res1"></div>
+</body>
+</html>

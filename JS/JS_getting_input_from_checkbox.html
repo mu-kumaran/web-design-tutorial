@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Getting input from checkbox</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let cou1 = document.getElementById("t1").checked;
+			let cou2 = document.getElementById("t2").checked;
+			let cou3 = document.getElementById("t3").checked;
+			let cou4 = document.getElementById("t4").checked; 
+			let ans="";
+			if(cou1 === true)
+				ans += document.getElementById("t1").value + ", ";
+			if(cou2 === true)
+				ans += document.getElementById("t2").value + ", ";
+			if(cou3 === true)
+				ans += document.getElementById("t3").value + ", ";
+			if(cou4 === true)
+				ans += document.getElementById("t4").value + ", ";
+			
+			document.getElementById("res").innerHTML = ans.substring(0,ans.length - 2);
+		}
+
+		function disp()
+		{
+			let cou = document.getElementsByName("courses");
+			let len = cou.length;
+			//console.log(len);
+			let ans="";
+			for(let i=0;i<len;i++)
+			{
+				if(cou[i].checked === true)
+					ans += cou[i].value + ", ";
+			}
+			document.getElementById("res1").innerHTML = ans.substring(0,ans.length - 2);
+		}
+		
+	</script>
+</head>
+<body>
+	<h2><u>JS Getting input from checkbox</u></h2>
+	<p style="font-size:18px;font-weight: bold;">Select Courses:</p>
+	<input type="checkbox" name="courses" value="c" id="t1">&nbsp;C &nbsp;
+	<input type="checkbox" name="courses" value="c++" id="t2">&nbsp;C++ &nbsp;
+	<input type="checkbox" name="courses" value="java" id="t3">&nbsp;Java &nbsp;
+	<input type="checkbox" name="courses" value="python" id="t4">&nbsp;Python &nbsp;
+	<br><br>
+	<button onclick="show(),disp()">Show</button><br><br>
+	<div id="res"></div><br>
+	<div id="res1"></div><br>
+</body>
+</html>

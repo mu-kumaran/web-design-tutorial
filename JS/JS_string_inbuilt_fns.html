@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String inbuilt functions</title>
+	<script type="text/javascript">
+		function show()
+		{
+			var myText = document.getElementById("txt").value;
+			document.getElementById("div1").innerHTML = "Length: "+myText.length;
+			document.getElementById("div2").innerHTML = "Uppercase: "+myText.toUpperCase();
+			document.getElementById("div3").innerHTML = "Lowercase: "+myText.toLowerCase();
+			document.getElementById("div4").innerHTML = "charAtPosition(3): "+myText.charAt(3);
+			document.getElementById("div5").innerHTML = "Trim: "+myText.trim();
+			document.getElementById("div6").innerHTML = "Trim Length: "+myText.trim().length;
+			document.getElementById("div7").innerHTML = "replace a by u: "+myText.replace("a","u");
+			document.getElementById("div8").innerHTML = "replace all a by u: "+myText.replaceAll("a","u");
+			document.getElementById("div9").innerHTML = "substring aft pos(5): "+myText.substring(5);
+			document.getElementById("div10").innerHTML = "substring bet pos(5 & 8): "+myText.substring(5,8);
+			document.getElementById("div11").innerHTML = "includes ('man'): "+myText.includes("man");
+			document.getElementById("div12").innerHTML = "starts with('man'): "+myText.startsWith("man");
+			document.getElementById("div13").innerHTML = "ends with('man'): "+myText.endsWith("man");
+		}
+	</script>
+</head>
+<body>
+	<h1>String Inbuilt functions:</h1>
+	Enter your text:
+	<input type="text" name="" placeholder="Enter text here" id="txt"><br>
+	<button onclick="show()">Show</button><br><br>
+	String characteristics display below:<br>
+	<div id="div1" ></div><br>
+	<div id="div2" ></div><br>
+	<div id="div3" ></div><br>
+	<div id="div4" ></div><br>
+	<div id="div5" ></div><br>
+	<div id="div6" ></div><br>
+	<div id="div7" ></div><br>
+	<div id="div8" ></div><br>
+	<div id="div9" ></div><br>
+	<div id="div10" ></div><br>
+	<div id="div11" ></div><br>
+	<div id="div12" ></div><br>
+	<div id="div13" ></div><br>
+
+</body>
+</html>

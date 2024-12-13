@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Break statement</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let ans = "";
+			for(let i=1;i<=100;i++)
+			{
+				if(i>=55)
+				{
+					break;
+				}
+				ans += i + " ";
+				document.getElementById("res").innerHTML = ans;
+			}
+		}
+
+		function disp()
+		{
+			let t = document.getElementById("t1").value;
+			let len = t.length;
+			let ans = "";
+			for(let i=0;i<len;i++)
+			{
+				if(t.charAt(i)===".")
+				{
+					break;
+				}
+				ans += t.charAt(i);
+				document.getElementById("res1").innerHTML = ans;
+			}
+		}			
+	</script>
+</head>
+<body>
+	<h2>JS Break statment</h2>
+	<input type="button" value="Jumping statement" onclick="show()"><br><br>
+	<div id="res"></div>
+
+	<h2></h2>
+	Text: <input type="text" placeholder="Enter text" id="t1"><br><br>
+	<input type="button" value="show" onclick="disp()"><br>
+	<div id="res1"></div>
+</body>
+</html>

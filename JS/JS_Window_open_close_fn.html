@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Window open/close fn</title>
+	<script type="text/javascript">
+		var win;
+		function show()
+		{
+			win = window.open("JS_1D_array.html");
+		}
+		function WinClose()
+		{
+			win.close();
+		}
+		function disp()
+		{
+			window.location.href = "JS_2D_array.html";
+		}
+	</script>
+</head>
+<body>
+	<h2>Open windows in new tab</h2>
+	<button onclick="show()">Open</button>
+	<button onclick="WinClose()">Close</button>
+
+	<h2>Open windows in same tab</h2>
+	<button onclick="disp()">Open in same tab</button>
+</body>
+</html>

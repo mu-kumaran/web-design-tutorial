@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Greatest among three numbers</title>
+	<script type="text/javascript">
+		function dis(){
+			var n1 = parseFloat(document.getElementById("t1").value);
+			var n2 = parseFloat(document.getElementById("t2").value);
+			var n3 = parseFloat(document.getElementById("t3").value);
+			var res;
+			if(n1 > n2 && n1>n3){
+				document.getElementById("res").innerHTML = "Result: "+n1 + " is greater number";
+			}
+			else if(n2>n3){
+				document.getElementById("res").innerHTML = "Result: "+n2 + " is greater number";
+			}
+			else {
+				document.getElementById("res").innerHTML = "Result: "+n3 + " is greater number";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Greatest among three numbers</h1>
+	n1: <input type="text" name="" placeholder="Enter no.1" id="t1"><br>
+	n2: <input type="text" name="" placeholder="Enter no.2" id="t2"><br>
+	n3: <input type="text" name="" placeholder="Enter no.3" id="t3"><br>
+	<button onclick="dis()">Show</button><br><br>
+	<div id="res"></div>
+</body>
+</html>

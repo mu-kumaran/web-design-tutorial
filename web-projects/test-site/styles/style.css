@@ -1,0 +1,29 @@
+#lion
+{
+	border:5px solid black ;
+	border-radius: 100px;
+	box-shadow: 10px 10px 10px 0px grey;
+}
+
+h1
+{
+	font-family: 'Tangerine', serif;
+	font-size: 60px;
+	text-shadow: 4px 4px 4px #aaa;
+	text-align: center;
+}
+
+
+body {
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+}
+
+p,li{
+	font-size: 16px;
+	line-height: 2;
+	letter-spacing: 1px;
+}

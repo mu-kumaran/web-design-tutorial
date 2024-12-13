@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Even or odd</title>
+	<script type="text/javascript">
+		function dis(){
+			var n = parseInt(document.getElementById("t1").value);
+			if(n%2===0){
+				document.getElementById("res").innerHTML = "Result: "+n + " is an EVEN number";
+			}
+			else{
+				document.getElementById("res").innerHTML = "Result: "+n + " is an ODD number";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Even or Odd</h1>
+	Number: <input type="text" name="" placeholder="Enter the number" id="t1"><br>
+	<button onclick="dis()">Show</button><br><br>
+	<div id="res"></div>
+</body>
+</html>

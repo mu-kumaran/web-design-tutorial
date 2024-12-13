@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS External file</title>
+	<script type="text/javascript" src="reverse.js"></script>
+	<script type="text/javascript">
+		function show()
+		{
+			let txt = document.getElementById("t1").value;
+			document.getElementById("res").innerHTML = reverselogic(txt);
+		}
+	</script>
+</head>
+<body>
+	<h2>JS Reverse string (using external JS file)</h2>
+	Text: <input type="text" name="" placeholder="Enter the text" id="t1"><br><br>
+	<input type="button" name="" value="Show" onclick="show()"><br><br>
+	<div id="res"></div>
+
+</body>
+</html>

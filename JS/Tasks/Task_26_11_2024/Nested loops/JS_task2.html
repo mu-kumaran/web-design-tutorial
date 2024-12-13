@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Prime number generation</title>
+	<script type="text/javascript">
+		function isPrime(num)
+		{
+			if(num<=1)
+				return false;
+			else if(num>=4)
+			{
+				for(let i=2;Math.pow(i,2)<=num;i++)
+				{
+					if(num%i==0)
+					{
+						return false;
+						//break;
+					}
+				}
+			return true;
+			}
+			else
+				return true;
+		}
+		function dis()
+		{
+			let n1=parseInt(document.getElementById("t1").value);
+			let n2=parseInt(document.getElementById("t2").value);
+			let ans = "";
+			for(let i=n1;i<=n2;i++)
+			{
+				if(isPrime(i))
+					ans += i + ", ";
+			}
+			document.getElementById("res1").innerHTML = "Primes between "+n1+" and "+n2+" :<br>---------------------------------";
+			document.getElementById("res2").innerHTML = ans;
+		}
+	</script>
+</head>
+<body>
+	<h1>Generate Prime numbers (within given range)</h1>
+	Start: <input type="text" name="" placeholder="Enter start number" id="t1"><br><br>
+	End  : <input type="text" name="" placeholder="Enter end number" id="t2"><br><br>
+	<input type="button" value="Generate" onclick="dis()"><br><br>
+	<div id="res1"></div>
+	<div id="res2"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Tables</title>
+	<link rel="icon" type="text/icon" href="images/CSS_logo.svg">
+	<style type="text/css">
+		table{
+			border: 0px solid red;
+			border-collapse: collapse;
+			height: 400px;
+			width: 50%;
+			background-color: #161245;
+			color: white;
+			border-radius: 50px;
+			text-align: center;
+		}
+		th
+		{
+			background-color: yellow;
+			color: red;
+		}
+		td,th
+		{
+			text-transform: uppercase;
+			padding: 4px;
+			border: 2px solid green;
+		}
+		#idly
+		{	
+			text-align: left;
+			vertical-align: top;
+		}
+		#poori
+		{
+			text-align: right;
+			vertical-align: bottom;
+		}
+	</style>
+</head>
+<body>
+	<table cellpadding="0" cellspacing="0" border="1">
+		<tr><th>Sno</th><th>Item</th><th>Rate</th><th>Qty</th></tr>
+		<tr><td>1001</td><td id="idly">Idly</td><td>Rs.10</td><td>1</td></tr>
+		<tr><td>1002</td><td>Dosai</td><td>Rs.20</td><td>1</td></tr>
+		<tr><td>1003</td><td>Chappathi</td><td>Rs.30</td><td>2</td></tr>
+		<tr><td>1004</td><td id="poori">Poori</td><td>Rs.40</td><td>2</td></tr>
+	</table>
+</body>
+</html>

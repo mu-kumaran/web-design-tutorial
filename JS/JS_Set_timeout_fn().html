@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Set timeout fn()</title>
+	<script type="text/javascript">
+		var image=["CSS_logo.png","fb.png","frogpicture.jpg","google1.jpg","thebeatles.jpg"];
+		var i=0;
+		function disp()
+		{
+			document.getElementById("t1").src = "D:/Manoj/JS/images/"+image[i];
+			i++;
+			if(i>4)
+				i=0;
+			setTimeout(disp,1000);
+		}
+		//setTimeout(disp,5000);		
+	</script>
+</head>
+<body>
+	<h2>Set Timeout function</h2><br><br>
+	<center>
+		<img src="D:/Manoj/JS/images/twitter.png" id="t1" width="50%" height="600px">
+		<div id="img_src"></div> 	
+	</center>
+	<button onclick="disp()">Display</button>
+</body>
+</html>

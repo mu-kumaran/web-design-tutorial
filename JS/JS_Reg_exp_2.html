@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Password validation</title>
+	<script type="text/javascript">
+		
+		function show_or_hide_pwd()
+		{
+			let img = ["pwd_eye_hide.svg","pwd_eye_open.svg"];
+			if(document.getElementById('t1').type == "text")
+			{
+				document.getElementById('t1').type = "password";
+				document.getElementById("img1").src = "D:/Manoj/JS/images/"+img[1];
+				//console.log(document.getElementById('t1').type);
+			}
+			else if(document.getElementById('t1').type == "password")
+			{
+				document.getElementById('t1').type = "text";
+				document.getElementById("img1").src = "D:/Manoj/JS/images/"+img[0];
+				//console.log(document.getElementById('t1').type);
+			}
+		}
+
+		function show()
+		{
+			let pwd = document.getElementById("t1").value;
+			const pat1 = /[A-Z]/g;
+			const pat2 = /[a-z]/g;
+			const pat3 = /[0-9]/g;
+			const pat4 = /[^a-zA-Z0-9]/g;
+			let ans = "Invalid Format. Password should contain <br>";
+
+			if(pwd.match(pat1) && pwd.match(pat2) && pwd.match(pat3) && pwd.match(pat4) && pwd.length>=8)
+				document.getElementById("res").innerHTML = "Valid format";
+			else
+			{
+				if(pwd.match(pat1) == null)
+					ans += "atleast one capital letter <br>";
+				if(pwd.match(pat2) == null)
+					ans += "atleast one small letter <br>";
+				if(pwd.match(pat3) == null)
+					ans += "atleast one number <br>";
+				if(pwd.match(pat4) == null)
+					ans += "atleast one special character <br>";
+				if(pwd.length < 8)
+					ans += "atleast 8 character length <br>";
+
+				document.getElementById("res").innerHTML = ans;
+			}
+			console.log(pwd.length);
+		}
+		
+	</script>
+</head>
+<body>
+	<h2>Password validation</h2>
+	<h3>(Atleast 1 caps, 1 small, 1 digit, 1 special character, length>=8)</h3>
+	<font size="4">Password:</font>
+	<input type="password" name="" placeholder="Enter your password" id="t1">
+	
+	<button onclick="show_or_hide_pwd()"><img src="D:/Manoj/JS/images/pwd_eye_open.svg" height="15px" width="20px" padding="0px" border="0px" id="img1"></button><br><br>
+	<input type="button" name="" value="Test validity" onclick="show()"><br><br>
+	<div id="res"></div>
+</body>
+</html>

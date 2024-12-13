@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON - this keyword</title>
+	<script type="text/javascript">
+		function student(rno,name,mark)
+		{
+			this.rno = rno;
+			this.name = name;
+			this.mark = mark;
+		}
+		var s1 = new student(1001,"manoj kumar",99);
+		document.write("<br>rno:"+s1.rno);
+		document.write("<br>name:"+s1.name);
+		document.write("<br>mark:"+s1.mark);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Dropdown</title>
+	<link rel="icon" type="text/icon" href="images/CSS_logo.svg">
+	<style type="text/css">
+		a
+		{ text-decoration:none }
+
+		#menuitem a
+		{ 
+			display: block;
+			color: white;
+		}
+
+		#menu #menuitem
+		{ display:none; }
+
+		#menu:hover #menuitem
+		{ display: block }
+
+		#menu
+		{
+			display: inline-block;
+			width: 400px;
+			height: auto;
+			background-color: green;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<button>Dropdown</button>
+		<div id="menuitem">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			<a href="#">Link 4</a>
+			<a href="#">Link 5</a>
+		</div>
+	</div>
+
+	<div id="menu">
+		<button>Dropdown</button>
+		<div id="menuitem">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+			<a href="#">Link 4</a>
+			<a href="#">Link 5</a>
+		</div>
+	</div>
+</body>
+</html>

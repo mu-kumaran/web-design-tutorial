@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Getting input from select tag</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let month = document.getElementById("month");
+			let ans= "";
+			console.log(month);
+			console.log(month.length);
+			for(let i=0;i<month.length;i++)
+			{
+				if(month[i].selected === true)
+					ans += month[i].value + ", "
+			}
+			document.getElementById("res").innerHTML = ans.substring(0,ans.length-2);
+		}
+	</script>
+</head>
+<body>
+	<h2><u>JS Getting input from &lt;select&gt; tag</u></h2>
+	<p>Select month: </p>
+	<select id="month" multiple size="10">
+		<option>January</option>
+		<option>February</option>
+		<option>March</option>
+		<option>April</option>
+		<option>May</option>
+		<option>June</option>
+		<option>July</option>
+		<option>August</option>
+		<option>September</option>
+		<option>October</option>
+		<option>November</option>
+		<option>December</option>
+	</select><br> <br>
+	<button onclick="show()">Show</button><br><br>
+	<div id="res"></div>
+</body>
+</html>

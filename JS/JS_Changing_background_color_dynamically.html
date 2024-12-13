@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Changing background colour dynamically</title>
+	<script type="text/javascript">
+		function change()
+		{
+			let ans = document.getElementById("col").value;
+			document.bgColor = ans;
+			console.log(ans);
+		}
+	</script>
+</head>
+<body>
+	<h2>Changing background colour dynamically</h2>
+	<select id="col">
+		<option>red</option>
+		<option>green</option>
+		<option>blue</option>
+		<option>yellow</option>
+		<option>cyan</option>
+		<option>violet</option>
+		<option>white</option>
+	</select>
+	<button onclick="change()">Change</button>
+</body>
+</html>

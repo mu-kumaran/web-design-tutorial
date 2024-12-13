@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Marriage eligibility</title>
+	<script type="text/javascript">
+		function show()
+		{
+			var opt = document.getElementsByName('gender');
+			var age = parseInt(document.getElementById('age').value);
+			for(var i=0;i<opt.length;i++)
+			{
+				if(opt[i].checked===true)
+				{
+					var gender = opt[i].value;
+				}
+			}
+			if(gender==='male')
+			{
+				if(age>=23)
+				{ document.getElementById('res').innerHTML="You are eligible to marry."}
+				else
+					{document.getElementById('res').innerHTML="You are not eligible to marry. Men's eligible age is 23."}
+			}
+			else if(age>=21)
+			{
+				document.getElementById('res').innerHTML="You are eligible to marry";
+			}
+			else
+				{document.getElementById('res').innerHTML="You are not eligible to marry. Women's eligible age is 21."}
+		}
+	</script>
+</head>
+<body>
+	<h1>Check your marriage eligibility</h1>
+	<b>Gender:</b> <input type="radio" name="gender" value="male" id="m">Male
+			<input type="radio" name="gender" value="female" id="f">Female
+			<br><br>
+	<b>Age:</b> &nbsp;<input type="text" name="age" placeholder="Enter your age" value="" id="age">
+	<br><br>
+	<input type="button" name="" value="Check" onclick="show()">
+	<br><br>
+	<div id="res"></div>
+</body>
+</html>

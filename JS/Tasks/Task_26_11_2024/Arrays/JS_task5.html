@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS 2D array</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let m = parseInt(document.getElementById("t1").value);
+			let n = parseInt(document.getElementById("t2").value);
+			let arr= new Array();
+			let ans = "";let res="";
+			
+			//Getting an array input
+			for(let i=0;i<m;i++)
+			{
+				arr[i] = [];
+				for(let j=0;j<n;j++)
+				{
+					arr[i][j] = parseInt(prompt("Enter A"+i+j+":"));
+				}
+			}
+
+			//Printing an array
+			for(let i=0;i<m;i++)
+			{
+				for(let j=0;j<n;j++)
+				{
+					if(j==(n-1))
+						res = res +arr[i][j]+ "<br>";
+					else
+						res = res +arr[i][j] + "&nbsp;&nbsp;&nbsp;";
+				}
+			}
+
+
+			//Row wise total in an 2D array
+			for(let i=0;i<m;i++)
+			{
+				let sum = 0;
+				for(let j=0;j<n;j++)
+				{
+					sum += arr[i][j];
+					if(j==(n-1))
+						ans = ans +arr[i][j]+ " = " + sum + "<br>";
+					else
+						ans = ans +arr[i][j] + "   +   ";
+				}
+			}
+			document.getElementById("res1").innerHTML = "Your array :" + "<br><br>" + res + "<br><br>";
+			document.getElementById("res2").innerHTML = "Result :" + "<br><br>" + ans;
+		}
+		
+	</script>
+</head>
+<body>
+	<h2>2D Array - Row wise total</h2>
+	m : &nbsp; <input type="text" placeholder="Enter row size" id="t1"><br><br>
+	n : &nbsp; <input type="text" placeholder="Enter column size" id="t2"><br><br>
+	<button onclick="show()">Result</button><br><br>
+	<div id="res1"></div>
+	<div id="res2"></div>
+</body>
+</html>

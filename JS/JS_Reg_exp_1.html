@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Regular expression</title>
+	<script type="text/javascript">
+		function phval()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[a-zA-Z ]{2,25}$/;
+			if(nam.match(phformat))
+				document.getElementById("res").innerHTML = "Valid";
+			else
+				document.getElementById("res").innerHTML = "Invalid";
+		}
+
+		function phval1()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[a-z ]{5,}$/;
+			if(nam.match(phformat))
+				document.getElementById("res1").innerHTML = "Valid";
+			else
+				document.getElementById("res1").innerHTML = "Invalid";
+		}
+
+		function phval2()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[a-zA-z0-9 ]{5,}$/;
+			if(nam.match(phformat))
+				document.getElementById("res2").innerHTML = "Valid";
+			else
+				document.getElementById("res2").innerHTML = "Invalid";
+		}
+
+		function phval3()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[^a-z0-9A-Z]{1,}$/;  //[^a-z0-9A-Z] [^a-zA-z\d]
+			if(nam.match(phformat))
+				document.getElementById("res3").innerHTML = "Valid";
+			else
+				document.getElementById("res3").innerHTML = "Invalid";
+		}
+
+		function phval4()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[a-zA-z0-9 ]+$/;
+			if(nam.match(phformat))
+				document.getElementById("res4").innerHTML = "Valid";
+			else
+				document.getElementById("res4").innerHTML = "Invalid";
+		}
+
+		function phval5()
+		{
+			let nam = document.getElementById("t1").value;
+			let phformat = /^[a-zA-z\d ]*$/;
+			if(nam.match(phformat))
+				document.getElementById("res5").innerHTML = "Valid";
+			else
+				document.getElementById("res5").innerHTML = "Invalid";
+		}
+	</script>
+</head>
+<body>
+	<h2><u>JS Regular expression</u></h2>
+	<h3>Name validation <br>(Min:2, Max:25 characters)</h3>
+	Name: <input type="text" name="" placeholder="Enter your name" id="t1"><br><br>
+	<button onclick="phval()">Test validity</button><br><br>
+	<div id="res"></div><br>
+
+	<h3>Name only small letters - min:5, max:infinite</h3>
+	<button onclick="phval1()">Test validity</button><br><br>
+	<div id="res1"></div><br>
+
+	<h3>Combined small,caps,spaces and numbers - min:5, max:infinite</h3>
+	<button onclick="phval2()">Test validity</button><br><br>
+	<div id="res2"></div><br>
+
+	<h3>Only special characters</h3>
+	<button onclick="phval3()">Test validity</button><br><br>
+	<div id="res3"></div><br>
+
+	<h3>Min:1, Max:Infinite (Should not be empty) <br> (Except Special Characters)</h3>
+	<button onclick="phval4()">Test validity</button><br><br>
+	<div id="res4"></div><br>
+
+	<h3>Min:0, Max:Infinite (Can be empty) <br> (Except Special Characters)</h3>
+	<button onclick="phval5()">Test validity</button><br><br>
+	<div id="res5"></div><br>
+</body>
+</html>

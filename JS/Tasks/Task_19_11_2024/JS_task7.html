@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS EB Bill</title>
+	<script type="text/javascript">
+		function show()
+		{
+			var unit = parseInt(document.getElementById('units').value);
+			var bill;
+			if(unit<=100)
+			{
+				bill = 50.00;
+				document.getElementById('res').innerHTML = 'Your bill: Rs.'+bill;
+			}
+			else if(unit>100 && unit<=200)
+			{
+				bill = 2.85*unit;
+				document.getElementById('res').innerHTML = 'Your bill: 2.85 x '+unit+' = Rs.'+bill;
+			}
+			else if(unit>200 && unit<=300)
+			{
+				bill = 3.70*unit;
+				document.getElementById('res').innerHTML = 'Your bill: 3.70 x '+unit+' = Rs.'+bill;
+			}
+			else if(unit>300 && unit<=400)
+			{
+				bill = 4.85*unit;
+				document.getElementById('res').innerHTML = 'Your bill: 4.85 x '+unit+' = Rs.'+bill;
+			}
+			else
+			{
+				bill = 6.75*unit;
+				document.getElementById('res').innerHTML = 'Your bill: 6.75 x '+unit+' = Rs.'+bill;
+			}
+			document.getElementById('res1').innerHTML = 'Bill Details: <br> ---------------- <br> <100 units = Rs.50 <br> 101 to 200 units = Rs.2.85/unit <br> 201 to 300 units = Rs.3.70/unit <br> 301 to 400 units = Rs.4.85/unit <br> Above 400 units = Rs.6.75/unit' ;
+			
+		}
+		
+	</script>
+</head>
+<body>
+<h1>Check your Electric bill</h1>
+Units:&nbsp;<input type="text" name="" placeholder="Enter the no of units" id="units">
+<br><br>
+<input type="button" name="" value="Show" onclick="show()">
+<br><br>
+<div id="res"></div>
+<br><br>
+<div id="res1"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Control statements - If else statements</title>
+	<script type="text/javascript">
+		function dis(){
+
+		var m1=parseFloat(document.getElementById("english").value);
+		var m2=parseFloat(document.getElementById("tamil").value);
+		var m3=parseFloat(document.getElementById("maths").value);
+		var m4=parseFloat(document.getElementById("science").value);
+		var m5=parseFloat(document.getElementById("social").value);
+		var total = m1+m2+m3+m4+m5;
+		var avg = total/5;
+		var res="";
+		var gra="";
+		if (m1>=35 && m2>=35 && m3>=35 && m4>=35 && m5>=35)
+		{
+			res = "Pass";
+			if (avg >= 85)
+				{gra = "outstanding";}
+			  else if (avg >= 75) 
+				{gra = "excellent";}
+			  else if (avg >= 65) 
+				{gra = "very good";}
+			  else if (avg >= 55) 
+				{gra = "good";}
+			  else 
+				{gra = "fair";}
+			
+		} else {
+			res = "fail";
+			gra = "no grade";
+		}
+		document.getElementById("res1").innerHTML = "Total:" + total;
+		document.getElementById("res2").innerHTML = "Average:" + avg;
+		document.getElementById("res3").innerHTML = "Result:" + res;
+		document.getElementById("res4").innerHTML = "Grade:" + gra;
+		}
+	</script>
+</head>
+<body>
+<h1>Find your result:</h1><br>
+<b>Enter your marks: </b><br>
+English : <input type="text" name="" placeholder="Enter your mark" id="english"><br>
+Tamil : <input type="text" name="" placeholder="Enter your mark" id="tamil"><br>
+Maths : <input type="text" name="" placeholder="Enter your mark" id=maths><br>
+Science : <input type="text" name="" placeholder="Enter your mark" id="science"><br>
+Social : <input type="text" name="" placeholder="Enter your mark" id="social"><br>
+<button onclick="dis()">Show</button><br><br>
+<div id="res1"></div>
+<div id="res2"></div>
+<div id="res3"></div>
+<div id="res4"></div>
+</body>
+</html>

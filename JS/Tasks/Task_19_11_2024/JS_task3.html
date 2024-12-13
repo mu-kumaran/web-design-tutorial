@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Voting age</title>
+	<script type="text/javascript">
+		function dis(){
+			var age = parseInt(document.getElementById("t1").value);
+			if(age>=18){
+				document.getElementById("res").innerHTML = "Result: You are eligible to vote";
+			}
+			else{
+				document.getElementById("res").innerHTML = "Result: You are not eligible to vote. You are below 18.";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Are you eligible to vote? Check below...</h2>
+	Age: <input type="text" name="" placeholder="Enter your age" id="t1"><br><br>
+	<button onclick="dis()">Show</button><br><br>
+	<div id="res"></div>
+</body>
+</html>

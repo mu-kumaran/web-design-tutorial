@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Regular expression</title>
+	<script type="text/javascript">
+		function phval()
+		{
+			let num = document.getElementById("t1").value;
+			let phformat = /^[0-9]{10}$/;
+			if(num.match(phformat))
+				document.getElementById("res").innerHTML = "Valid";
+			else
+				document.getElementById("res").innerHTML = "Invalid";
+		}
+		function phval1()
+		{
+			let num = document.getElementById("t2").value;
+			let phformat = /^[0-9]{5,15}$/;
+			if(num.match(phformat))
+				document.getElementById("res1").innerHTML = "Valid";
+			else
+				document.getElementById("res1").innerHTML = "Invalid";
+		}
+	</script>
+</head>
+<body>
+	<h2><u>JS Regular expression</u></h2>
+	<h3>Phone number validation (only 10 numbers)</h3>
+	Phone number: <input type="text" name="" id="t1" placeholder="Enter phone number"><br><br>
+	<input type="button" name="" value="test valid or invalid phone" onclick="phval()"><br><br>
+	<div id="res"></div>
+
+	<h3>Phone number validation (Min:5 and Max:15 numbers)</h3>
+	Phone number: <input type="text" name="" id="t2" placeholder="Enter phone number"><br><br>
+	<input type="button" name="" value="test valid or invalid phone" onclick="phval1()"><br><br>
+	<div id="res1"></div>
+</body>
+</html>

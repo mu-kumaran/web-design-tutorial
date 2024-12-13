@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS For loop</title>
+	<script type="text/javascript">
+		function dis()
+		{
+			let s = parseInt(document.getElementById("t1").value);
+			let e = parseInt(document.getElementById("t2").value);
+			let ans="";
+			let sum=0;
+			for(let i=s;i<=e;i++)
+			{
+				sum=sum+i;
+				if(i==e)
+					ans= ans+i+"="+sum;
+				else
+					ans=ans+i+"+";
+			}
+			document.getElementById("res").innerHTML=ans;
+		}
+
+		function show()
+		{
+			let s = parseInt(document.getElementById("t3").value);
+			let e = parseInt(document.getElementById("t4").value);
+			let ans="";
+			let sum=0;
+			for(let i=s;i>=e;i--)
+			{
+				sum=sum+i;
+				if(i==e)
+					ans= ans+i+"="+sum;
+				else
+					ans=ans+i+"+";
+			}
+			document.getElementById("res1").innerHTML=ans;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Sum of numbers</h1>
+	<input type="text" name="" placeholder="Enter start number" id="t1"><br><br>
+	<input type="text" name="" placeholder="Enter end number" id="t2"><br><br>
+	<input type="button" name="" onclick="dis()" value="Click me">
+	<div id="res"></div>
+
+	<h1>Sum of numbers (Reverse order)</h1>
+	<input type="text" name="" placeholder="Enter start number" id="t3"><br><br>
+	<input type="text" name="" placeholder="Enter end number" id="t4"><br><br>
+	<input type="button" name="" onclick="show()" value="Click me">
+	<div id="res1"></div>
+
+</body>
+</html>

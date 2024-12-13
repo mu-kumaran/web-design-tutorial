@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS String to Char array</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let t = document.getElementById("t1").value;
+			let name = t.split("");
+			let ans = "", res = "";
+			let len = name.length;
+			for(let i=0;i<len;i++)
+			{
+				ans += name[i] + ", ";
+				res += t.charAt(i) + ", ";
+			}
+			document.getElementById('res').innerHTML = ans.substring(0,ans.length-2);
+			document.getElementById('res1').innerHTML = res.substring(0,res.length-2);
+		}
+	</script>
+</head>
+<body>
+	<h2>String to Char array</h2>
+	<input type="text" placeholder="Enter your text" id="t1"><br><br>
+	<input type="button" value="String to char array" onclick="show()"><br><br>
+	<div id="res"></div><br>
+	<div id="res1"></div>
+</body>
+</html>

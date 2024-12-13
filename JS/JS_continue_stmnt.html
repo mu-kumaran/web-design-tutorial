@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Continue statement</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let ans="";
+			for(let i=1;i<=100;i++)
+			{
+				if(i<=50 || i>=75)
+				{
+					continue;
+				}
+				ans = ans+i+" ";
+			}
+			document.getElementById("res1").innerHTML=ans;
+		}
+		function lower()
+		{
+			let t = document.getElementById("t1").value;
+			let ans = "";
+			len = t.length;
+			for(let i=0;i<len;i++)
+			{
+				if(t.charAt(i)>='A' && t.charAt(i)<='Z')
+				{
+					continue;
+				}
+				ans += t.charAt(i);
+			}
+			document.getElementById("res2").innerHTML = ans;
+		}
+		function upper()
+		{
+			let t = document.getElementById("t2").value;
+			let ans = "";
+			len = t.length;
+			for(let i=0;i<len;i++)
+			{
+				if(t.charAt(i)>='a' && t.charAt(i)<='z')
+				{
+					continue;
+				}
+				ans += t.charAt(i);
+			}
+			document.getElementById("res3").innerHTML = ans;
+		}
+	</script>
+</head>
+<body>
+	<h1>JS Continue statement</h1>
+	<input type="button" name="" value="jumping statement" onclick="show()"><br><br>
+	<div id="res1"></div>
+	<h2>Extracting lowercase:</h2>
+	Text: <input type="text" name="" placeholder="Enter text" id="t1">
+	<input type="button" name="" value="show" onclick="lower()"><br><br>
+	<div id="res2"></div>
+	<h2>Extracting Uppercase:</h2>
+	Text: <input type="text" name="" placeholder="Enter text" id="t2">
+	<input type="button" name="" value="show" onclick="upper()"><br><br>
+	<div id="res3"></div>
+
+</body>
+</html>

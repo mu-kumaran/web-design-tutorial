@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS sum of digits</title>
+	<script type="text/javascript">
+		function SumofDigits(num)
+		{
+			let sum = 0;
+			num = Math.abs(num);
+			while(num>0)
+			{
+				sum += (num%10)
+				num = Math.floor(num/10);
+			}
+			return sum;
+		}
+		function show()
+		{
+			let n = parseInt(document.getElementById('t1').value);
+			let array = "";
+			let arr = new Array();
+			let ans1 = ""; let ans2 = ""; let res;
+			
+			// Getting array input
+			for(let i=0;i<n;i++)
+			{
+				arr[i] = parseInt(prompt("Enter array value A"+(i+1)+":"));
+				if(i==(n-1))
+					array += arr[i];
+				else
+					array += arr[i]+', ';
+			}
+
+			//sum of digits of numbers in an array
+			for(let i=0;i<n;i++)
+			{
+				if(i==(n-1))
+					ans1 = ans1 + SumofDigits(arr[i]);
+				else
+					ans1 = ans1 + SumofDigits(arr[i]) + ", ";				
+			}
+
+			//sum of digits of numbers upto a single digit in an array
+			for(let i=0;i<n;i++)
+			{
+				res = SumofDigits(arr[i]);
+				while(res>=10)
+					{res = SumofDigits(res);}
+				if(i==(n-1))
+					ans2 = ans2 + res;
+				else
+					ans2 = ans2 + res + ", ";
+			}
+			
+			document.getElementById("res1").innerHTML = "Your array : [ "+array+" ] <br><br>";
+			document.getElementById("res2").innerHTML = "Sum of digits : " + "[ " +ans1+ "]";
+			document.getElementById("res3").innerHTML = "<h2>Sum of digits of numbers in an array upto single digit</h2>";
+			document.getElementById("res4").innerHTML = "Your array : [ "+array+" ] <br><br>";
+			document.getElementById("res5").innerHTML = "Result: " + "[ " +ans2+ "]";
+		}
+
+	</script>
+</head>
+<body>
+	<h2>Sum of digits of numbers in an array</h2>
+	Array size:&nbsp;<input type="text" placeholder="Enter the size of an array" id="t1"><br><br>
+	<button onclick="show()">Show</button><br><br>
+	<div id="res1"></div>
+	<div id="res2"></div>
+	<div id="res3"></div>
+	<div id="res4"></div>
+	<div id="res5"></div>
+</body>
+</html>

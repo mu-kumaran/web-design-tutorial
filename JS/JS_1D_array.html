@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Single Dimensional Array</title>
+	<script type="text/javascript">
+		function arrdemo()
+		{
+			let arr = new Array(11,22,33,44,55,66,77,8,99,45);
+			let ans = "";
+			let len = arr.length;
+			let sum = 0;
+
+			for(let i=0;i<len;i++)
+			{
+				sum = sum + arr[i];
+				ans = ans + arr[i] + "<br>";
+			}
+			document.getElementById("res").innerHTML = ans+"<br>sum = "+sum;
+			console.log(ans);
+		}
+
+		function disp()
+		{
+			let arr = [11,22,33,44,55,66,77,8,99,45,-12,-45,44,90];
+			let ans = "";
+			let len = arr.length;
+			let sum = 0;
+
+			for(let i=0;i<len;i++)
+			{
+				if(arr[i]%2==0 && arr[i]>0)
+				{
+					sum = sum + arr[i];
+					ans = ans + arr[i] + "<br>";
+				}
+			}
+			document.getElementById("res1").innerHTML = ans+"<br>sum = "+sum;
+			console.log(ans);
+		}
+	</script>
+</head>
+<body>
+	<h2>Single dimensional array</h2>
+	<input type="button" value="Clickme array results" onclick="arrdemo(),disp()"><br><br>
+	<div id="res"></div><br>
+	<div id="res1"></div>
+</body>
+</html>

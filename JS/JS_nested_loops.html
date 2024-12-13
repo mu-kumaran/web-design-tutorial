@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Nested loops</title>
+	<script type="text/javascript">
+		function matrix()
+		{
+			let r = parseInt(document.getElementById("t1").value);
+			let c = parseInt(document.getElementById("t2").value);
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=c;j++)
+				{
+					document.write(''+i+j+" ");
+				}
+				document.write("<br>")
+			}
+		}
+		
+		function Row_rev()
+		{
+			let r = parseInt(document.getElementById("t1").value);
+			let c = parseInt(document.getElementById("t2").value);
+			for(let i=r;i>=1;i--)
+			{
+				for(let j=1;j<=c;j++)
+				{
+					document.write(''+i+j+" ");
+				}
+				document.write("<br>")
+			}
+		}
+		
+		function Col_rev()
+		{
+			let r = parseInt(document.getElementById("t1").value);
+			let c = parseInt(document.getElementById("t2").value);
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=c;j>=1;j--)
+				{
+					document.write(''+i+j+" ");
+				}
+				document.write("<br>")
+			}
+		}
+		
+		function Row_Col_rev()
+		{
+			let r = parseInt(document.getElementById("t1").value);
+			let c = parseInt(document.getElementById("t2").value);
+			for(let i=r;i>=1;i--)
+			{
+				for(let j=c;j>=1;j--)
+				{
+					document.write(''+i+j+" ");
+				}
+				document.write("<br>")
+			}
+		}
+		
+		function matrix_triangle_1()
+		{
+			let r = parseInt(document.getElementById("t3").value);
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=i;j++)
+				{
+					document.write(''+i+j+" ");
+					//document.write('*'+" ");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function matrix_triangle_2()
+		{
+			let r = parseInt(document.getElementById("t3").value);
+			for(let i=r;i>=1;i--)
+			{
+				for(let j=1;j<=i;j++)
+				{
+					document.write(''+i+j+" ");
+					//document.write('*'+" ");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function matrix_triangle_3()
+		{
+			let r = parseInt(document.getElementById("t3").value);
+			let c = r;
+			let k=0;
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=(c-k);j++)
+				{
+					document.write(''+i+j+" ");
+				}
+				k++;
+				document.write("<br>")
+			}
+		}
+
+		function matrix_triangle_string()
+		{
+			let nam = document.getElementById("t5").value;
+			len = nam.length;
+			for(let i=0;i<len;i++)
+			{
+				for(let j=0;j<=i;j++)
+				{
+					document.write(nam.charAt(j)+" ");
+					//document.write('*'+" ");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function star_matrix_triangle_1()
+		{
+			let r = parseInt(document.getElementById("t4").value);
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=i;j++)
+				{
+					document.write('*'+" ");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function star_matrix_triangle_2()
+		{
+			let r = parseInt(document.getElementById("t4").value);
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=r;j++)
+				{
+					if(j<i)
+						document.write("&nbsp;&nbsp;&nbsp;")
+					else
+						document.write("*"+" ");
+				}
+				document.write("<br>")
+			}
+		}
+
+		function star_matrix_triangle_3()
+		{
+			let r = parseInt(document.getElementById("t4").value);
+			let c = r;
+			
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=c;j++)
+				{
+					document.write('*'+" ");
+				}
+				c--
+				document.write("<br>")
+			}
+		}
+
+		function star_matrix_triangle_4()
+		{
+			let r = parseInt(document.getElementById("t4").value);
+			let k=r;
+			for(let i=1;i<=r;i++)
+			{
+				for(let j=1;j<=r;j++)
+				{
+					if(j<k)
+						document.write("&nbsp;&nbsp;&nbsp;");
+					else
+						document.write('*'+" ");
+				}
+				k--;
+				document.write("<br>")
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Matrix: Rows and columns</h1>
+	Rows: <input type="text" name="" placeholder="Enter no of rows" id="t1"><br><br>
+	Cols: <input type="text" name="" placeholder="Enter no of cols" id="t2"><br><br>
+	<input type="button" name="" value="Show Matrix" onclick="matrix()"><br><br>
+	<input type="button" name="" value="Row reverse" onclick="Row_rev()"><br><br>
+	<input type="button" name="" value="Column reverse" onclick="Col_rev()"><br><br>
+	<input type="button" name="" value="Row and Column reverse" onclick="Row_Col_rev()"><br><br>
+	
+	<h1>Matrix: Triangle pattern (with numbers)</h1>
+	Rows & Cols: <input type="text" name="" placeholder="Enter equivalent no of rows & cols" id="t3" size="30"><br><br>
+	<input type="button" name="" value="Triangle 1" onclick="matrix_triangle_1()"><br><br>
+	<input type="button" name="" value="Triangle 2" onclick="matrix_triangle_2()"><br><br>
+	<input type="button" name="" value="Triangle 3" onclick="matrix_triangle_3()"><br><br>
+	
+	<h1>Matrix: Triangle pattern (with '*' symbol)</h1>
+	Rows & Cols: <input type="text" name="" placeholder="Enter equivalent no of rows & cols" id="t4" size="30"><br><br>
+	<input type="button" name="" value="Triangle 1" onclick="star_matrix_triangle_1()"><br><br>
+	<input type="button" name="" value="Triangle 2" onclick="star_matrix_triangle_2()"><br><br>
+	<input type="button" name="" value="Triangle 3" onclick="star_matrix_triangle_3()"><br><br>
+	<input type="button" name="" value="Triangle 4" onclick="star_matrix_triangle_4()"><br><br>
+
+
+	<h1>Matrix: String-Triangle pattern</h1>
+	Name: <input type="text" name="" placeholder="Enter the name" id="t5"><br><br>
+	<input type="button" name="" value="Show triangle" onclick="matrix_triangle_string()"><br><br>
+	
+
+</body>
+</html>

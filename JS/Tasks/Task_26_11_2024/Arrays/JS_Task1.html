@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Max and Min value in an array</title>
+	<script type="text/javascript">
+		function show()
+		{
+			let n = parseInt(document.getElementById('t1').value);
+			let array = "";
+			let arr = new Array();
+			let max = 0,min = 0;
+			
+			// Getting array input
+			for(let i=0;i<n;i++)
+			{
+				arr[i] = parseInt(prompt("Enter array value A"+(i+1)));
+				if(i==(n-1))
+					array += arr[i];
+				else
+					array += arr[i]+', ';
+			}
+
+			// Finding Max and Min value 
+			max = arr[0]; 
+			min = arr[0];
+			for(let i=1;i<n;i++)
+			{
+				if(arr[i-1]>max)
+					max = arr[i-1];
+				if(arr[i-1]<min)
+					min = arr[i-1];
+			}
+
+			document.getElementById("res1").innerHTML = "Given array : [ "+array+" ] <br><br>"
+			document.getElementById("res2").innerHTML = "Max value : "+max+"<br><br>"+"Min value : "+min;
+		}
+	</script>
+</head>
+<body>
+	<h2>Max and Min value of an array</h2>
+	Array size:&nbsp;<input type="text" placeholder="Enter the size of an array" id="t1"><br><br>
+	<button onclick="show()">Show</button><br><br>
+	<div id="res1"></div>
+	<div id="res2"></div>
+
+</body>
+</html>

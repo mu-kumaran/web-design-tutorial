@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS sample</title>
+	<link rel="icon" type="text/css" href="">
+	<style type="text/css">
+		h1{ color:yellow; }
+		span{color: red;}
+		body{
+			background-image: url("D:/Manoj/CSS/images/nasa.jpg");
+			background-repeat: no-repeat;
+			color: white;
+			background-size: cover;
+		}
+		#NASA{
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			margin-left: 310px;
+			margin-right: 310px;
+			border: 2px solid blueviolet;
+		}
+		p{
+			text-align: justify;
+		}
+
+		#tooltip
+		{
+			visibility: hidden;
+			border-radius: 5px;
+			background-color: whitesmoke;
+			color: black;
+			display: inline-block;
+			padding: 3px 5px 3px 5px;
+			position: fixed;
+			top: 10px;
+			z-index: +1;
+		} 
+
+		#heading:hover + #tooltip
+		{
+			visibility: visible;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="NASA">
+		<div id="titlebox">
+			<h1 id="heading">NASA - National Aeronautics and Space Administration</h1>
+			<div id="tooltip">
+			About NASA Space science
+			</div>
+		</div>
+		
+		<p>The National Aeronautics and Space Administration is an independent agency
+		of the <span>US federal government</span> responsible for the civil space program,
+		aeronautics research, and space research.
+		</p>
+		
+		
+	</div>
+	
+</body>
+</html>

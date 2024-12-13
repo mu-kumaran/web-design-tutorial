@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Animations</title>
+	<link rel="icon" type="text/icon" href="images/CSS_logo.svg">
+	<style type="text/css">
+		#img1
+		{
+			position: fixed;
+			animation-name: manoj;
+			animation-iteration-count: 3; /*1,2,3,....infinite*/
+			animation-direction: alternate; /*alternate-reverse, alternate, normal....*/
+			animation-delay: 2s;
+			animation-duration: 4s;
+			animation-timing-function: ease-in-out;
+
+		}
+		#img2
+		{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 200px;
+			height: 200px;
+			animation-name: manoj1;
+			animation-iteration-count: 3; /*1,2,3,....infinite*/
+			animation-direction: alternate; /*alternate-reverse, alternate, normal....*/
+			animation-delay: 2s;
+			animation-duration: 4s;
+			animation-timing-function: ease-in-out;
+
+		}
+		#img3
+		{
+			position: absolute;
+			bottom: 10px;
+			left: 600px;
+			width: 400px;
+			height: 200px;
+			animation-name: manoj2;
+			animation-iteration-count: 3; /*1,2,3,....infinite*/
+			animation-direction: alternate; /*alternate-reverse, alternate, normal....*/
+			animation-delay: 2s;
+			animation-duration: 4s;
+			animation-timing-function: ease-in-out;
+
+		}
+		@keyframes manoj
+		{
+			from
+			{
+				left:0px;
+				top:0px;
+			}
+			to
+			{
+				left:1300px;
+				top:500px;
+				transform:rotate(270deg); /*30,60,45,90,...360*/ /*rotate, translate,....*/
+			}
+		}
+		@keyframes manoj1
+		{
+			from
+			{
+				right:0px;
+				top:0px;
+			}
+			to
+			{
+				right:1300px;
+				top:500px;
+				transform:rotate(-270deg); /*30,60,45,90,...360*/ /*rotate, translate,....*/
+			}
+		}
+		@keyframes manoj2
+		{
+			from
+			{
+				left:600px;
+				bottom:0px;
+			}
+			to
+			{
+				left:600px;
+				bottom:0px;
+				transform:rotate(230deg); /*30,60,45,90,...360*/ /*rotate, translate,....*/
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<img id="img1" src="images\html.png">
+	<img id="img2" src="images\CSS_logo.svg">
+	<img id="img3" src="images\twitter.jpg">
+
+</body>
+</html>

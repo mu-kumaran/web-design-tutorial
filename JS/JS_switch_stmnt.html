@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS switch statement</title>
+	<script type="text/javascript">
+		function dis()
+		{
+			var n1 = parseInt(document.getElementById('t1').value);
+			var n2 = parseInt(document.getElementById('t2').value);
+			var ch = parseInt(document.getElementById('t3').value);
+			var res;
+			switch (ch)
+			{
+			case 1: res = n1+n2;
+					break;
+			case 2: res = n1-n2;
+					break;
+			case 3: res = n1*n2;
+					break;
+			case 4: res = n1/n2;
+					break;
+			default: res = "Enter correct choice";
+			}
+			document.getElementById("ans").innerHTML = res;
+		}
+	</script>
+</head>
+<body>
+	<center>switch demo</center>
+	<input type="text" name="" placeholder="Enter number one" id="t1"><br>
+	<input type="text" name="" placeholder="Enter number two" id="t2"><br>
+	1.add 2.sub 3.mul 4.div
+	<input type="text" name="" placeholder="Enter choice:" id="t3"><br>
+	<button onclick="dis()">Show answer</button>
+	<div id="ans"></div>
+</body>
+</html>
