@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS OOPS using classes</title>
+	<script type="text/javascript">
+		class student
+		{
+			constructor (rno,name,mark)
+			{
+				this.rno = rno;
+				this.name = name;
+				this.mark = mark;
+				console.log("constructor auto called")
+			}
+			show()
+			{
+				document.write(this.rno+" - "+this.name+" - "+this.mark+"<br>");
+			}
+			showans()
+			{
+				return this.rno+" - "+this.name+" - "+this.mark;
+			}
+		}
+
+		var s1 = new student(1001,"gowtham",89);
+		var s2 = new student(1002,"manoj",79);
+		var s3 = new student(1003,"rajasekhar",59);
+		var s4 = new student(1004,"sathya",69);
+		var s5 = new student(1005,"chitra",79);
+
+		s1.show();
+		s2.show();
+		s3.show();
+		s4.show();
+		s5.show();
+
+		//another method to display 
+
+		allobj = [s1,s2,s3,s4,s5];
+		for(obj of allobj)
+		{
+			document.write("<---------"+obj.showans()+"---------->"+"<br>");
+		}
+
+		for(obj of allobj)
+		{
+			obj.show();
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

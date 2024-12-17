@@ -3,187 +3,44 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tables</title>
-	<style type="text/css">
-		#example th{
-			background-color: yellow;
-			border-color: red;
+	<title></title>
+	<script type="text/javascript">
+		var stud = [{rno:"001",name:"manoj",mark:99.45},
+					{rno:"002",name:"raj",mark:86.75},
+					{rno:"003",name:"venkat",mark:89},
+					{rno:"004",name:"brindha",mark:78}];
+		function show()
+		{
+			let res=""
+			for(let obj of stud)
+			{
+				res += obj.rno+" - "+obj.name+" - "+obj.mark+"<br>";
+				//document.write(obj.rno+" - "+obj.name+" - "+obj.mark+"<br>");
+			}
+			document.getElementById("res").innerHTML = res;
 		}
-		#example td{
-			text-align: center;
-			border-color: red;
+		function del()
+		{
+			let r = document.getElementById("roll").value;
+			let i=0;
+			for(let obj of stud)
+			{	
+				if(obj.rno === r)
+				{
+					stud.splice(i,1);
+				}
+				i++;
+			}
+			show();
 		}
-
-		#rowcolspan td,th{
-			text-align: center;
-		}
-	</style>
+	</script>
+	
 </head>
 <body>
-	<h1 align="center"><font color="red" size="6"><u>Tables</u></font></h1>
-	<p><font color="red" size="5"><u>Normal table - Cell Spacing Property</u></font></p>
-	<table align="center" border="3" cellspacing="30">
-		<caption><b>Cell Spacing Property</b></caption>
-		<tr>
-			<th>Column header 1</th>
-			<th>Column header 2</th>
-		</tr>
-		<tr>
-			<td>Row1 Col1</td>
-			<td>Row1 Col2</td>
-		</tr>
-		<tr>
-			<td>Row2 Col1</td>
-			<td>Row2 Col2</td>
-		</tr>
-	</table><br><br>
-
-	<p><font color="red" size="5"><u>Normal table - Cell Padding Property</u></font></p>
-	<table align="center" border="3" cellpadding="30">
-		<caption><b>Cell Padding property</b></caption>
-		<tr>
-			<th>Column header 1</th>
-			<th>Column header 2</th>
-		</tr>
-		<tr>
-			<td>Row1 Col1</td>
-			<td>Row1 Col2</td>
-		</tr>
-		<tr>
-			<td>Row2 Col1</td>
-			<td>Row2 Col2</td>
-		</tr>
-	</table><br><br>
-
-	<p><font color="red" size="5"><u>Normal table - Both combined property</u></font></p>
-	<table align="center" border="5" cellpadding="30" cellspacing="30">
-		<caption><b>Both combined property</b></caption>
-		<tr>
-			<th>Column header 1</th>
-			<th>Column header 2</th>
-		</tr>
-		<tr>
-			<td>Row1 Col1</td>
-			<td>Row1 Col2</td>
-		</tr>
-		<tr>
-			<td>Row2 Col1</td>
-			<td>Row2 Col2</td>
-		</tr>		
-	</table><br><br>
-
-	<p><font color="red" size="5"><u>Normal table - Color Property</u></font></p>
-	<table align="center" border="5" cellpadding="30" cellspacing="30" bgcolor="cyan" bordercolor="yellow">
-		<caption><b>Color Property</b></caption>
-		<tr>
-			<th><font color="red" size="4"><b>Column header 1</b></font></th>
-			<th><font color="red" size="4"><b>Column header 2</b></font></th>
-		</tr>
-		<tr>
-			<td><font color="red" size="3"><b>Row1 Col1</b></font></td>
-			<td><font color="red" size="3"><b>Row1 Col2</b></font></td>
-		</tr>
-		<tr>
-			<td><font color="red" size="3"><b>Row2 Col1</b></font></td>
-			<td><font color="red" size="3"><b>Row2 Col2</b></font></td>
-		</tr>	
-	</table><br><br>
-
-	<p><font color="red" size="5"><u>Example Table</u></font></p>
-	<div id="example">
-	<table align="center" border="3" bgcolor="cyan" cellpadding="25" cellspacing="25" width="75%" id="tab1" bordercolor="red">
-		<tr>
-			<th>Sno</th>
-			<th>Sname</th>
-			<th>Mark 1</th>
-			<th>Mark 2</th>
-			<th>Mark 3</th>
-		</tr>
-		<tr>
-			<td>1001</td>
-			<td>Manoj</td>
-			<td>67</td>
-			<td>78</td>
-			<td>84</td>
-		</tr>
-		<tr>
-			<td>1002</td>
-			<td>Suresh</td>
-			<td>76</td>
-			<td>98</td>
-			<td>48</td>
-		</tr>
-		<tr>
-			<td>1003</td>
-			<td>Mahesh</td>
-			<td>84</td>
-			<td>87</td>
-			<td>89</td>
-		</tr>
-		
-	</table>
-	</div><br>
-	<p><font color="red" size="5"><u>Rowspan & Colspan property</u></font></p>
-	<div id="rowcolspan">
-		<table cellpadding="20" cellspacing="3" align="center" border="3" width="75%">
-			<tr>
-				<th colspan="8">ABC School</th>
-			</tr>
-			<tr>
-				<th rowspan="2">Roll no</th>
-				<th rowspan="2">Name</th>
-				<th colspan="5">Subjects</th>
-				<th rowspan="2">Total</th>
-			</tr>
-			<tr>
-				<th>Tamil</th>
-				<th>English</th>
-				<th>Maths</th>
-				<th>Science</th>
-				<th>Social</th>
-			</tr>
-			<tr>
-				<td>1001</td>
-				<td>Manoj</td>
-				<td>67</td>
-				<td>78</td>
-				<td>84</td>
-				<td>78</td>
-				<td>84</td>
-				<td>391</td>
-			</tr>
-			<tr>
-				<td>1001</td>
-				<td>Manoj</td>
-				<td>67</td>
-				<td>78</td>
-				<td>84</td>
-				<td>78</td>
-				<td>84</td>
-				<td>391</td>
-			</tr>
-			<tr>
-				<td>1001</td>
-				<td>Manoj</td>
-				<td>67</td>
-				<td>78</td>
-				<td>84</td>
-				<td>78</td>
-				<td>84</td>
-				<td>391</td>
-			</tr>
-			<tr>
-				<td>1001</td>
-				<td>Manoj</td>
-				<td>67</td>
-				<td>78</td>
-				<td>84</td>
-				<td>78</td>
-				<td>84</td>
-				<td>391</td>
-			</tr>
-		</table>
-	</div>
+	<button onclick="show()">show</button><br><br>
+	Rollno:<input type="text" name="" id="roll">
+	<button onclick="del()">delete</button><br><br>
+	<div id="res"></div>
 
 </body>
 </html>

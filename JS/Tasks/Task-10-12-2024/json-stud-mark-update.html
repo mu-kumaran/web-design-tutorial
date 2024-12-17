@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OOPS - classes - task</title>
+	<script type="text/javascript">
+		class Student
+		{
+			constructor (rno,name,mark)
+			{
+				this.rno = rno;
+				this.name = name;
+				this.mark = mark;
+				console.log("constructor auto called");
+			}
+			show()
+			{
+				return this.rno+" - "+this.name+" - "+this.mark+"<br>";
+			}
+
+		}
+
+		var stud_profile = [];
+		function show_things()
+		{
+			let r = document.getElementById("t1").value;
+			let n = document.getElementById("t2").value;
+			let m = parseFloat(document.getElementById("t3").value);
+			let i = stud_profile.length;
+			if(r === "")
+			{
+				alert("Enter roll no");
+				return;
+			}
+			for(let i=0;i<stud_profile.length;i++)
+			{
+				if(stud_profile[i]["rno"] === r)
+				{
+					alert("Roll no already available");
+					return;
+				}
+			}
+			if(n === "")
+			{
+				alert("Enter name");
+				return;
+			}
+
+			let stud = new Student(r,n,m);let res = "";
+			stud_profile[i] = stud;
+			document.getElementById("res1").innerHTML = "Roll no"+" - "+"Name"+" - "+"Mark"+"<br>";
+			for(let obj of stud_profile)
+			{
+				res += obj.show()
+			}
+			document.getElementById("res2").innerHTML =res;
+				
+		}
+		function del()
+		{
+			let r = document.getElementById("t1").value;
+			let i=0,res = "";
+			if(r == "")
+			{
+				alert("Enter roll no for deletion");
+				return;
+			}
+			for(let obj of stud_profile)
+			{	
+				if(obj.rno === r)
+				{
+					stud_profile.splice(i,1);
+				}
+				i++;
+			}
+			for(let obj of stud_profile)
+			{
+				res += obj.show()
+			}
+			document.getElementById("res2").innerHTML =res;
+		}
+	</script>
+</head>
+<body>
+	<h1><u>Students mark updation </u></h1>
+	<h3>Roll no: <input type="text" name="" id="t1"></h3>
+	<h3>Name: <input type="text" name="" id="t2"></h3>
+	<h3>Mark: <input type="text" name="" id="t3"></h3>
+	<button onclick="show_things()">Insert/Save</button>
+	<button onclick="del()">Delete</button>&nbsp;(Enter roll no for deletion)
+	<br><br>
+	<div id="res1"></div>
+	<div id="res2"></div>
+</body>
+</html>

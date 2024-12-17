@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON dynamic memory allocation</title>
+	<script type="text/javascript">
+		function Student(rno,name,mark)
+		{
+			this.rno = rno;
+			this.name = name;
+			this.mark = mark;
+		}
+		function callobj()
+		{
+			let r = document.getElementById("t1").value;
+			let n = document.getElementById("t2").value;
+			let m = document.getElementById("t3").value;
+			var s1 = new Student(r,n,m);
+			document.write("Roll no: "+ s1.rno+"<br>");
+			document.write("Student name: "+ s1.name+"<br>");
+			document.write("Mark: "+ s1.mark+"<br>");
+		}
+	</script>
+</head>
+<body>
+	<h3>R.No:<input type="text" name="" id="t1"></h3>
+	<h3>Student name: <input type="text" name="" id="t2"></h3>
+	<h3>Mark:<input type="text" name="" id="t3"></h3>
+	<button onclick="callobj()">Click me</button>
+</body>
+</html>

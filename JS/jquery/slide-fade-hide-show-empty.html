@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQ - append,prepend,after,remove function</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#su").click(function(){
+				$("img").slideUp(1000);
+			});
+			$("#sd").click(function(){
+				$("img").slideDown(2000);
+			});
+			$("#st").click(function(){
+				$("img").slideToggle(5000);
+			});
+			$("#fi").click(function(){
+				$("img").fadeIn(1000);
+			});
+			$("#fo").click(function(){
+				$("img").fadeOut(2000);
+			});
+			$("#ft").click(function(){
+				$("img").fadeToggle(5000);
+			});
+			$("#sh").click(function(){
+				$("img").show(2000);
+			});
+			$("#hi").click(function(){
+				$("img").hide(1000);
+			});
+			$("#emp").click(function(){
+				$("div").empty();
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div>
+		<center>
+			<img src="../images/thebeatles.jpg" width="250px" height="250px">
+		</center>
+		<p>This is paragraph</p>
+	</div>
+	
+	<button id="su">Slide up</button>
+	<button id="sd">Slide down</button>
+	<button id="st">Slide toggle</button>
+	<button id="fi">fade in</button>
+	<button id="fo">fade out</button>
+	<button id="ft">fade toggle</button>
+	<button id="hi">hide</button>
+	<button id="sh">show</button>
+	<button id="emp">empty</button>
+</body>
+</html>
