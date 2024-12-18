@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery CSS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#but1").click(function(){
+				$("#but1").css("background-color","red");
+				$("#but1").css("font-size","35px");
+				$("#but1").css("color","white");
+				$("#but1").css("border-radius","20px");
+				$("#but1").css("font-weight","bold");
+				$("body").css("background-color","cyan");
+				$("body").css("background-image","url('../images/google.webp')");
+				$("body").css("background-size","200px 200px"); //cover,contain
+				$("body").css("background-repeat","repeat"); //repeat-x, repeat-y
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="but1">CSS JQUERY</button>
+</body>
+</html>
