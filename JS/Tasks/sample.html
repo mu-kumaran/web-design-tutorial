@@ -5,33 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS number series</title>
     <script type="text/javascript">
-        function show()
-        {
-            let N = parseInt(document.getElementById("num").value);
-            console.log(N);
-            let res="";
-            
-             for(let i=1;i<=N;i++)
-             {
-                if(N%i == 0)
-                {
-                    if(i==N)
-                        res += i;
-                    else
-                        res += i + ", ";
-                }
-                    
-             }
-          
-            document.getElementById("res").innerHTML = "Factors are "+res;
-        }
+        document.querySelector("html").addEventListener("click", () => {
+  alert("Ouch! Stop poking me!");
+});
     </script>
 </head>
 <body>
-    <h2>Finding factors</h2>
+    <h2 id="hg">Finding factors</h2>
     Number: <input type="text" name="" id="num"><br><br>
     <button onclick="show()">Show</button><br><br>
     <div id="res"></div>
-
 </body>
 </html>
