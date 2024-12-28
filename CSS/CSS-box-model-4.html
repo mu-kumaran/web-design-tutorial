@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		ul{
+			display: flex;
+			list-style: none;
+			border: 2px solid blue;
+			text-align: center;
+		}
+
+		li{
+			margin: 5px 5px ;
+		}
+		#normal
+		{
+			margin-top: 38px;
+		}
+		#normal a{
+			text-decoration: none;
+			color: white;
+			padding: 15px;
+			background-color: darkmagenta;
+			margin: 5px 25px 5px -15px;
+		}
+
+		#Inline-block a{
+			text-decoration: none;
+			color: white;
+			padding: 15px;
+			background-color: darkmagenta;
+			margin: 5px 25px 5px -15px;
+			display: inline-block;
+		}
+
+		#Inline-block a:hover, #normal a:hover{
+			background-color: darkred;
+		}
+
+		#container{
+			display: flex;
+		}
+
+		#container div{
+			text-align: center;
+			border: 2px solid green;
+			padding: 20px;
+		}
+		h2{
+			text-decoration: underline;
+		}
+
+		#con1{
+			margin-left: 200px;
+		}
+		#con2{
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+		<div id="container">
+			<div id="con1">
+				<h2>Normal display</h2>
+				<ul id="normal">
+					<li><a href="#">Link one</a></li>
+					<li><a href="#">Link two</a></li>
+					<li><a href="#">Link three</a></li>
+				</ul>
+			</div>
+			<div id="con2">
+				<h2>Inline-block display</h2>
+				<ul id="Inline-block">
+					<li><a href="#">Link one</a></li>
+					<li><a href="#">Link two</a></li>
+					<li><a href="#">Link three</a></li>
+				</ul>
+			</div>
+		</div>
+		<h2>Using ---> Inline-block display</h2>
+		<p>
+			Here &lt;anchor&gt; is an inline element.
+			If we do not want an item to break onto a new line, but do want it to respect width and height properties and avoid the overlapping seen above we use <strong>display:inline-block</strong> in styling &lt;anchor&gt; element.
+		</p>
+		
+</body>
+</html>

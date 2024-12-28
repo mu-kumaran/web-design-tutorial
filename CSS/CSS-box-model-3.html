@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#p1,#p2,#p3{
+			border: 2px solid blue;
+			text-align: center;
+			width: 200px;
+			margin: 0 auto;
+		}
+		h1{
+			color: red;
+			text-align: center;
+		}
+		#inline{
+			border: 2px solid blue;
+			background-color: cyan;
+			padding: 20px;
+		}
+		#inline-block{
+			border: 2px solid blue;
+			background-color: cyan;
+			padding: 20px;
+			display: inline-block;
+		}
+
+	</style>
+</head>
+<body>	
+	<div id="container">
+		<div>
+			<h1><u>Normal display</u></h1>
+			<p id="p1">
+				I am a paragraph and this is a <a href="#">span</a> inside that paragraph. A span
+	  			is an inline element and so does not respect width and height.
+			</p>
+		</div>
+		<div>
+			<h1><u>Inline display</u></h1>
+			<p id="p2">
+				I am a paragraph and this is a <span id="inline">span</span> inside that paragraph. A span
+  				is an inline element and so does not respect width and height.
+			</p>
+		</div>
+		<div>
+			<h1><u>Inline-block display</u></h1>
+			<p id="p3">
+				I am a paragraph and this is a <span id="inline-block">span</span> inside that paragraph. A span
+	  			is an inline element and so does not respect width and height.
+			</p>
+		</div>
+	</div>
+		<h2>Using ---> Inline-block display</h2>
+		<p>
+			Here &lt;span&gt; is an inline element
+			If we do not want an item to break onto a new line, but do want it to respect width and height properties and avoid the overlapping seen above we use <strong>display:inline-block</strong> in styling &lt;span&gt; element.
+		</p>
+		
+</body>
+</html>
