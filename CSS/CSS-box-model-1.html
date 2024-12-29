@@ -14,24 +14,32 @@
 		*::after {
 		  box-sizing: inherit;
 		}
+		body{
+			width: 500px;
+			margin: 40px auto;
+		}
 		
 		.box {
 			  border: 5px solid rebeccapurple;
 			  background-color: lightgray;
 			  padding: 40px;
-			  margin: 40px;
+			  margin: 40px auto;
 			  width: 300px;
 			  height: 150px;
 		}
-
-		/*.alternate {
-		  	box-sizing: border-box;
-		}*/
+		
+		#container{
+			border: 2px dotted red;
+			text-align: center;
+		}
 
 	</style>
 </head>
-<body>
+<body>	
+	<div id="container">
+		<h1 style="color: red; text-decoration: underline;">CSS Box Model</h1>
 		<div class="box">I use the inherited alternate box model.</div>
 		<div class="box alternate">I use the inherited alternate box model.</div>
+	</div>
 </body>
 </html>

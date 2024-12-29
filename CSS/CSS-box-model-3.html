@@ -5,11 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
+		body{
+			font-family: sans-serif;
+		}
+		#p4{
+			font-size: 25px;
+		}
 		#p1,#p2,#p3{
 			border: 2px solid blue;
 			text-align: center;
-			width: 200px;
-			margin: 0 auto;
+			width: 250px;
+			padding: 10px;
 		}
 		h1{
 			color: red;
@@ -26,26 +32,35 @@
 			padding: 20px;
 			display: inline-block;
 		}
+		#container{
+			display: flex;
+		}
+		.con{
+			border: 2px solid darkgreen;
+			margin: 40px auto;
+			padding:  0px 20px;
+		}
 
 	</style>
 </head>
 <body>	
+	<h1 style="color: blue; text-decoration: underline;">CSS Box Model</h1>
 	<div id="container">
-		<div>
+		<div class="con">
 			<h1><u>Normal display</u></h1>
 			<p id="p1">
 				I am a paragraph and this is a <a href="#">span</a> inside that paragraph. A span
 	  			is an inline element and so does not respect width and height.
 			</p>
 		</div>
-		<div>
+		<div class="con">
 			<h1><u>Inline display</u></h1>
 			<p id="p2">
 				I am a paragraph and this is a <span id="inline">span</span> inside that paragraph. A span
   				is an inline element and so does not respect width and height.
 			</p>
 		</div>
-		<div>
+		<div class="con">
 			<h1><u>Inline-block display</u></h1>
 			<p id="p3">
 				I am a paragraph and this is a <span id="inline-block">span</span> inside that paragraph. A span
@@ -54,8 +69,8 @@
 		</div>
 	</div>
 		<h2>Using ---> Inline-block display</h2>
-		<p>
-			Here &lt;span&gt; is an inline element
+		<p id="p4">
+			Here &lt;span&gt; is an inline element.
 			If we do not want an item to break onto a new line, but do want it to respect width and height properties and avoid the overlapping seen above we use <strong>display:inline-block</strong> in styling &lt;span&gt; element.
 		</p>
 		
