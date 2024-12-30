@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+}
+body{
+	background-image: url("../images/travel-6.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: sans-serif;
+	width: 100%;
+	height: 100vh;
+}
+#container1{
+	display: flex;
+/*	border: 2px solid white;*/
+	margin-top: 15px;
+}
+#icon{
+	color: white;
+	font-style: italic;
+	margin-left: 10px;
+}
+
+#nav{
+	display: flex;
+	list-style-type: none;
+/*	border: 2px solid blue;*/
+	margin-left: 250px;
+}
+
+#nav a{
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+/*	border: 2px solid white;*/
+	margin: 0 20px;
+	padding: 0px 0.5px 6px 0.5px;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+#but1{
+	margin-left: 370px;
+	padding: 5px 15px;
+	background-color: DodgerBlue;
+	border-radius: 5px;
+	color: white;
+	font-weight: bolder;
+}
+#but1:hover
+{
+	background-color: blueviolet;
+	cursor: pointer;
+}
+
+#nav a:hover{
+	border-bottom:2px solid yellow;
+	color: yellow;
+}
+
+#container2{
+	position: absolute;
+	top: 140px;
+	left: 200px;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+/*	border:2px solid white;*/
+}
+
+#head,#msg,#con1{
+	padding: 10px;
+}
+#head{
+	font-size: 30px;
+}
+#msg{
+	font-size: 20px;
+}
+span{
+	color: yellow;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#but2{
+	background-color: dodgerblue;
+}
+.but{
+	padding: 3px 10px;
+	margin-right: 10px;
+	color: white;
+	background-color: red;
+	font-weight: bold;
+}
+
+#but2:hover{
+	background-color: darkblue;
+	cursor: pointer;
+}
+
+#but3:hover{
+	background-color: darkred;
+	cursor: pointer;
+}
