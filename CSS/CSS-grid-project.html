@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.apartment{
+			display: grid;
+			height: 350px;
+			width: 500px;
+			background-color: lightblue;
+			grid-template-rows: repeat(5,70px); 
+			grid-template-columns: repeat(5,100px); 
+		}
+
+		.apartment .room{
+			border: 1px solid black;
+			text-align: center;
+			font-size: 16px;
+		}
+		 .apartment .room#living-room{
+		 	grid-column:1/6;
+		 	grid-row: 1/3;
+		 	background-color: #74b9ff;
+		 }
+
+		 .apartment .room#washroom{
+		 	grid-row-start: 3;
+		 	background-color: #81ecec;
+		 }
+
+		 .apartment .room#kitchen {
+		 	grid-column-start: 1;
+		 	grid-row: 4/6;
+		 	background-color: #ff7675;
+		 }
+
+		 .apartment .room#bedroom{
+		 	grid-column: 2/4;
+		 	grid-row: 3/6;
+		 	background-color: #ffeaa7;
+		 }
+
+		 .apartment .room#master{
+		 	grid-column: 4/6;
+		 	grid-row: 3/6;
+		 	background-color: #ffeaa7;
+		 }
+
+
+	</style>
+</head>
+<body>
+	<h2>An Apartment plan - using CSS Grid property</h2>
+	<div class="apartment">
+		<div class="room" id="living-room">Living room</div>
+		<div class="room" id="kitchen">Kitchen</div>
+		<div class="room" id="bedroom">Bedroom</div>
+		<div class="room" id="washroom">Common Washroom and Hallway</div>
+		<div class="room" id="master">Master Bedroom</div>
+	</div>
+</body>
+</html>

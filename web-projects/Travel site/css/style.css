@@ -1,109 +1,133 @@
 *{
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
-	letter-spacing: 1px;
-	word-spacing: 1px;
 }
+
 body{
-	background-image: url("../images/travel-6.jpg");
+	background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.2)), url("../images/travel-6.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	font-family: sans-serif;
 	width: 100%;
 	height: 100vh;
+	font-family: sans-serif;
 }
-#container1{
-	display: flex;
-/*	border: 2px solid white;*/
-	margin-top: 15px;
-}
-#icon{
+
+.nav-bar{
 	color: white;
+	max-width: 100%;
+	margin-top: 20px;
+	height: 50px;
+}
+
+.logo{
+	float: left;
 	font-style: italic;
-	margin-left: 10px;
-}
-
-#nav{
-	display: flex;
-	list-style-type: none;
-/*	border: 2px solid blue;*/
-	margin-left: 250px;
-}
-
-#nav a{
-	text-decoration: none;
-	display: inline-block;
-	color: white;
-/*	border: 2px solid white;*/
-	margin: 0 20px;
-	padding: 0px 0.5px 6px 0.5px;
-	font-weight: bold;
-	font-size: 17px;
-}
-
-#but1{
-	margin-left: 370px;
-	padding: 5px 15px;
-	background-color: DodgerBlue;
-	border-radius: 5px;
-	color: white;
 	font-weight: bolder;
+	margin-left: 20px;
+	letter-spacing: 2px;
+	font-size: 18px;
 }
-#but1:hover
-{
-	background-color: blueviolet;
+.nav-menu{
+	padding: 0 10px 10px 10px; 
+	display: inline-block;
+	position: relative;
+	left: 15%;
+}
+
+.nav-menu li{
+	display: inline;
+	list-style: none;
+
+}
+
+.nav-menu a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+	margin: 0px 20px;
+}
+
+.nav-menu a:hover{
+	padding-bottom: 5px;
+	color: yellow;
+	border-bottom: 2px solid yellow;
+}
+
+
+.login-button{
+	float: right;
+}
+
+.login-button button{
+	background-color: dodgerblue;
+	color: white;
+	border-radius: 15px;
+	font-size: 15px;
+	font-weight: bolder;
+	padding: 10px 15px;
+	margin: -25px 20px 0px 0px;
 	cursor: pointer;
 }
 
-#nav a:hover{
-	border-bottom:2px solid yellow;
+.login-button button:hover{
 	color: yellow;
-}
-
-#container2{
-	position: absolute;
-	top: 140px;
-	left: 200px;
-	width: 60%;
-	margin: 0 auto;
+	background-color: blue;
+} 
+.container{
 	text-align: center;
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.container h1{
 	color: white;
-/*	border:2px solid white;*/
+	font-size: 40px;
+	font-weight: bolder;
+	margin-bottom: 20px;
+	letter-spacing: 2px;
 }
 
-#head,#msg,#con1{
-	padding: 10px;
-}
-#head{
-	font-size: 30px;
-}
-#msg{
+.container p{
+	color: white;
 	font-size: 20px;
+	margin-bottom: 20px;
+	line-height: 1.5;
+	letter-spacing: 1px;
 }
-span{
+
+.container span{
 	color: yellow;
 	font-style: italic;
-	font-weight: bold;
 }
 
-#but2{
+.button-one{
+	padding: 8px 20px;
 	background-color: dodgerblue;
-}
-.but{
-	padding: 3px 10px;
-	margin-right: 10px;
+	border: none;
 	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.button-two{
+	padding: 8px 20px;
 	background-color: red;
-	font-weight: bold;
+	border: none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	margin-right: 10px;
 }
 
-#but2:hover{
+.button-one:hover{
 	background-color: darkblue;
-	cursor: pointer;
 }
 
-#but3:hover{
+.button-two:hover{
 	background-color: darkred;
-	cursor: pointer;
 }

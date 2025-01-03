@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		html,body{ font-family: "Verdana",sans-serif;};
+		h1,h2,h3,h4,h5,h6{
+			font-family: "Segoe UI",sans-serif;
+		}
+		.container{
+			display: grid;
+			background-color: lightblue;
+			height: 210px;
+			width: 290px;
+			grid-template-columns:50px 50px 50px 50px 50px;
+			grid-template-rows: 100px 100px 100px 100px;
+			gap: 10px;
+
+		}
+		.container .item{
+			/*height: 100px;
+			width: 100px;*/
+			background-color: coral;
+/*			margin: 15px;*/
+			text-align: center;
+			font-size: 10px;
+		}
+
+		.container .item.one{
+			grid-row-start:2 ;
+			grid-column-start: 3;
+		}
+	</style>
+	<script type="text/javascript" src="#"></script>
+</head>
+<body>
+		<div class="container">
+			<div class="item one">One</div> 
+			<!-- inherits the property of other classes named item -->
+			<div class="item">Two</div>
+			<div class="item">Three</div>
+			<div class="item">Four</div>
+			<div class="item">Five</div>
+			<div class="item">Six</div>
+			<div class="item">Seven</div>
+			<div class="item">Eight</div>
+			<div class="item">Nine</div>
+			<div class="item">Ten</div>
+		</div>
+</body>
+</html>
