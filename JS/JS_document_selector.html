@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Document selector query </title>
+	<style type="text/css">
+		button{
+			background-color: cyan;
+			border: 2px double green;
+			border-radius: 15px;
+			padding: 10px;
+			font-size: 20px;
+			cursor: pointer;
+			letter-spacing: 1px;
+		}
+	</style>
+
+
+	
+</head>
+<body>
+	<h1>JS - Document selector query</h1>
+	<button id="button1" onclick="user1()">User1: Manoj</button>
+	<button id="button2">User2: Kumar</button>
+
+	
+
+	 <!-- Here the script works only after html page load -->
+	<script type="text/javascript">
+		const btn1 = document.querySelector("#button1");
+		const btn2 = document.querySelector("#button2");
+
+		btn2.addEventListener("click",user2);
+		function user1(){
+			console.log(btn1);
+			console.log(btn1.textContent);
+
+			const name = prompt("Enter user name :");
+			btn1.textContent = "User1: "+name;
+		}
+
+		function user2(){
+			console.log(btn2);
+			console.log(btn2.textContent);
+
+			const name = prompt("Enter user name :");
+			btn2.textContent = "User2: "+name;
+		}
+	</script>
+</body>
+</html>
