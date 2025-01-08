@@ -21,18 +21,24 @@
 </head>
 <body>
 	<h1>JS - Document selector query</h1>
-	<button id="button1" onclick="user1()">User1: Manoj</button>
+	<button id="button1" onclick="user1_update()">User1: Manoj</button>
 	<button id="button2">User2: Kumar</button>
+	<p>Note: Click on user buttons to change the name</p>
 
 	
 
-	 <!-- Here the script works only after html page load -->
+	 <!-- Here the script works only after html page load, adding scripts in head section will show error -->
 	<script type="text/javascript">
+
+		//Creating objects btn1 and btn2
 		const btn1 = document.querySelector("#button1");
 		const btn2 = document.querySelector("#button2");
 
-		btn2.addEventListener("click",user2);
-		function user1(){
+		//Adding event to the object
+		btn2.addEventListener("click",user2_update);
+
+		//Reusable functions
+		function user1_update(){
 			console.log(btn1);
 			console.log(btn1.textContent);
 
@@ -40,7 +46,7 @@
 			btn1.textContent = "User1: "+name;
 		}
 
-		function user2(){
+		function user2_update(){
 			console.log(btn2);
 			console.log(btn2.textContent);
 
