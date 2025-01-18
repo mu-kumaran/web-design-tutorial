@@ -9,7 +9,8 @@
 <h1>JS - DOM - QuerySelector method</h1>
 <button id="but1">User1: Manoj</button>
 <button id="but2">User2: Kumar</button>
-<button id="but3">Change BGcolor</button>
+<button id="but3">Random BGcolor</button>
+<button id="but4">Change BGcolor</button>
 
 
 <script type="text/javascript">
@@ -25,16 +26,22 @@
 			user2.textContent = "User2: "+name;
 		});
 
-		//Changing  background
+		//Changing  background in a random manner
 		let bodi = document.querySelector("body");
 		let bg = document.querySelector("#but3");
-		let colors;
 		bg.addEventListener("click",()=>{
 			let val1 = Math.floor(Math.random()*255);
 			let val2 = Math.floor(Math.random()*255);
 			let val3 = Math.floor(Math.random()*255);
 			// console.log(val1,val2,val3);
 			bodi.style.backgroundColor = "rgb("+ val1 +","+ val2 +","+ val3+")";
+		});
+
+		//Changing BG in a selected manner
+		let bg1 = document.querySelector('#but4');
+		bg1.addEventListener('click',()=>{
+			let val = prompt("Enter color name or rgb() or rgba() format:");
+			bodi.style.backgroundColor = val;
 		});
 	</script>
 </body>
