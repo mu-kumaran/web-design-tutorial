@@ -1,0 +1,148 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	font-family: sans-serif;
+	background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.2)),url("../images/travel-11.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+nav{
+/*	border: 2px solid blue;*/
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	margin: 30px 10px;
+}
+
+.logo,.nav-bar{
+/*	border: 2px double yellow;*/
+}
+
+.logo{
+	font-family: sans-serif;
+	font-size: 18px;
+	background-color: blueviolet;
+	letter-spacing: 1px;
+	color: white;
+	border-radius: 15px;
+	box-shadow: ;
+	padding: 8px;
+	font-style: italic;
+}
+
+.button{
+	font-size: 20px;
+	padding: 5px;
+	border-radius: 15px;
+	background-color: dodgerblue;
+	color: white;
+	font-weight: bold;
+	border: 2px solid dodgerblue;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: darkblue;
+	border: 2px solid darkblue;
+	color: yellow;
+}
+
+.nav-bar ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+}
+
+.nav-bar li a{
+	text-decoration: none;
+	color: white;
+/*	border-bottom: 2px solid blue;*/
+	padding: 10px 0px;
+}
+
+.nav-bar li{
+	padding: 8px 0px;
+	margin: 0px 35px;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 1.3px;
+/*	border-bottom: 2px solid blue;*/
+}
+
+.nav-bar li a:hover{
+	color: yellow;
+	border-bottom: 2px solid yellow;
+}
+
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 700px;
+/*	margin: 0px auto;*/
+	text-align: center;
+	color: white;
+}
+
+.container h1{
+	font-size: 40px;
+	letter-spacing: 1.3px;
+	font-style: italic;
+	font-weight: bold;
+	padding: 5px;
+	margin-bottom: 10px;
+	color: yellow;	
+}
+
+.container p{
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	padding: 10px;
+	margin: 10px 0;
+/*	font-weight: bold;*/
+}
+
+span{
+	color: yellow;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.container button{
+	font-size: 18px;
+	font-weight: bolder;
+	padding: 8px 18px;
+	margin: 0px 10px;
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+}
+
+.container .button-one{
+	background-color: dodgerblue;
+	color: white;
+}
+
+.container .button-two{
+	background-color: red;
+	color: white;
+}
+
+.button-one:hover{
+	background-color: blue;
+}
+
+.button-two:hover{
+	background-color: darkred;
+}
