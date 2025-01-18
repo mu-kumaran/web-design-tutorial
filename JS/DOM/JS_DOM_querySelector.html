@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS - query selector</title>
+	<script type="text/javascript">
+		function dis()
+		{
+			document.querySelector("button").style.backgroundColor = "green";
+			document.querySelector("h1").style.backgroundColor = "green";
+			document.querySelector(".mycla").style.backgroundColor = "green";
+			document.querySelector("#id1").style.backgroundColor = "green";
+			var data = document.querySelector("input").value;
+			alert(data);
+
+			var but = document.querySelector("#but1");
+			but.addEventListener("click",function(){
+				alert("button clicked using querySelector and addEventListener");
+				document.querySelector("input").value = "muthukumaran";
+			});
+
+		}
+	</script>
+</head>
+<body onload="dis()">
+	<h1>JS - query selector</h1>
+	<input type="text" name="" id="ipt" value="manoj">
+	<button id="but1">Click me</button>
+	<h1>Welcome to header 1</h1>
+	<h2 id="id1">Welcome to header 2</h2>
+	<h3 class="mycla">Welcome to header 3</h3>
+</body>
+</html>

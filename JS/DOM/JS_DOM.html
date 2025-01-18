@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS DOM</title>
+	<script type="text/javascript">
+		function show(){
+			document.getElementById("but").style.backgroundColor = "red";
+			document.getElementById("but").style.fontSize = "44px";
+			document.getElementById("but").style.padding = "30px";
+			document.getElementById("but").style.border = "10px double red";
+			document.getElementById("but").style.boxShadow = "10px 10px 10px 10px black";
+			document.getElementById("but").style.color = "white";
+		}
+
+	</script>
+</head>
+<body>
+	<h1>JS - Document Object Model - CSS Style dynamic</h1>
+	<button onclick="show()" id="but">Click me</button>
+</body>
+</html>
