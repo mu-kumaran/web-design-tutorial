@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form validation</title>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		/*body{
+			overflow-x: hidden;
+		}*/
+		.container{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: url("https://img.freepik.com/free-vector/realistic-style-technology-particle-background_23-2148426704.jpg?semt=ais_hybrid");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		#form{
+			background: #0f0021a8;
+			color: white;
+			width: 40%;
+			padding: 50px;
+		}
+		#form input{
+			width: 100%;
+			margin-top: 10px;
+			padding: 10px 5px;
+		}
+		.form-group {
+			padding-bottom: 20px;
+		}
+		.form-group label{
+			font-size: 18px;
+		}
+		button{
+			background: orange;
+			color: white;
+			padding: 10px 40px;
+			outline: none;
+			border: none;
+			margin-right: 20px;
+		}
+		.form-group p{
+			display: none;
+		}
+		.form-group.error p{
+			display: block;
+			color: red;
+		}
+		.form-group.error input{
+			border: 2px solid red;
+		}
+
+		.form-group.success input{
+			border: 2px solid green;
+		}
+		.form-group.success p{
+			display: none;
+		}
+
+		@media screen and (max-width:800px){
+			#form{
+				width: 60%;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+
+
+	<div class="container">
+		<form id="form">
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" name="username" id="username" placeholder="Enter your username...">
+				<p></p>
+			</div>
+			<div class="form-group">
+				<label>Gmail</label>
+				<input type="text" name="gmail" id="gmail" placeholder="Enter your gmail...">
+				<p></p>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" name="password" id="password" placeholder="Enter your password...">
+				<p></p>
+			</div>
+			<div class="form-group">
+				<label>Confirm Password</label>
+				<input type="password" name="cpassword" id="cpassword" placeholder="Enter your cpassword...">
+				<p></p>
+			</div>
+			<button type="submit">Submit</button>
+			<button type="reset">Reset</button>
+		</form>
+	</div>
+
+
+	<script type="text/javascript">
+		
+		let form=document.querySelector("#form");
+
+		let username=document.querySelector("#username");
+		let gmail=document.querySelector("#gmail");
+		let password=document.querySelector("#password");
+		let cpassword=document.querySelector("#cpassword");
+
+		console.log(username.value)
+
+		form.addEventListener("submit",function(e){
+			e.preventDefault();
+			checkinput();
+		})
+
+		function checkinput(){
+			let usernameval=username.value.trim();
+			let gmailval=gmail.value.trim();
+			let passwordval=password.value.trim();
+			let cpasswordval=cpassword.value.trim();
+
+			if(usernameval==""){
+				seterror(username,"username does not blank");
+			}else if(usernameval.length<=8){
+				seterror(username,"minimum 8 characters need");
+			}
+			else if(usernameval.length>=15){
+				seterror(username,"maximum 15 characters only allowed");
+			}
+			else{
+				setsuccess(username);
+			}
+
+			if(gmailval==""){
+				seterror(gmail,"gmail does not blank");
+			}else if(!isGmail(gmailval)){
+				seterror(gmail,"give valid email address");
+			}
+			else{
+				setsuccess(gmail);
+			}
+
+
+			if(passwordval==""){
+				seterror(password,"password does not blank");
+			}else{
+				setsuccess(password);
+			}
+
+			if(cpasswordval==""){
+				seterror(cpassword,"cpassword does not blank");
+			}else if(cpasswordval!=passwordval){
+				seterror(cpassword,"does not match");
+			}
+			else{
+				setsuccess(cpassword);
+			}
+
+
+		}
+
+		function isGmail(email){
+			return /([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/.test(email);
+		}
+
+
+		function seterror(input,errmsg){
+			let parent=input.parentElement;
+			let p=parent.querySelector("p");
+			p.innerText=errmsg;
+			parent.classList.add("error");
+		}
+
+		function setsuccess(input){
+			let parent=input.parentElement;
+			parent.classList.add("success");
+		}
+
+
+	</script>
+
+</body>
+</html>
