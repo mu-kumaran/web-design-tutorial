@@ -6,13 +6,16 @@
 	<title>JS Document selector query </title>
 	<style type="text/css">
 		button{
-			background-color: cyan;
-			border: 2px double green;
+			background-color: dodgerblue;
+			border: 2px double dodgerblue;
 			border-radius: 15px;
 			padding: 10px;
 			font-size: 20px;
 			cursor: pointer;
 			letter-spacing: 1px;
+			color: white;
+			font-weight: bolder;
+			box-shadow: 2px 2px 5px 2px grey;
 		}
 	</style>
 
@@ -30,6 +33,29 @@
 	 <!-- Here the script works only after html page load, adding scripts in head section will show error -->
 	<script type="text/javascript">
 
+		//Changing body BG color dynamically
+		var pick=0;
+		function change_bg(){
+			let bg_color = ["red","cyan","white","green","yellow","orange","blue","grey","violet","pink"];
+			let body_bg = document.querySelector('body');
+
+			// let random = Math.floor(Math.random()*10);
+			// const bg = bg_color[random];
+			if(pick<10){
+				let bg = bg_color[pick];
+				body_bg.style.backgroundColor = bg;
+			}else{
+				pick=0;
+				let bg = bg_color[pick];
+				body_bg.style.backgroundColor = bg;
+			}
+			pick++;
+			// console.log(random);
+			// console.log(bg);
+		}
+
+		setInterval(change_bg,2000);
+
 		//Creating objects btn1 and btn2
 		const btn1 = document.querySelector("#button1");
 		const btn2 = document.querySelector("#button2");
@@ -41,9 +67,11 @@
 		function user1_update(){
 			console.log(btn1);
 			console.log(btn1.textContent);
+			console.log(btn1.style.backgroundColor);
 
 			const name = prompt("Enter user name :");
 			btn1.textContent = "User1: "+name;
+			btn1.style.backgroundColor = "red";
 		}
 
 		function user2_update(){
