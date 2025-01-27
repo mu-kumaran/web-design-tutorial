@@ -58,6 +58,9 @@ nav{
 	height: 50px;
 	background-color: #ff80ff;
 	margin-bottom: 10px;
+	position: sticky;
+	top: 0;
+	left:0;
 }
 
 nav ul{
