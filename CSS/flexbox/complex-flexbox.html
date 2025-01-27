@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complex-flexbox</title>
+	<style type="text/css">
+		html{
+			font-family: sans-serif;
+		}
+		body{
+			margin: 0;
+		}
+		header{
+			border: 2px solid white;
+			height: 100px;
+			background: purple;
+			text-align: center;
+	        color: white;
+	        line-height: 100px;
+		}
+		h1 {
+			border:2px solid white;        
+        	margin: 0;
+
+      	}
+       	article {
+	        padding: 10px;
+	        margin: 10px;
+	        background: aqua;
+      	}
+
+      	section{
+      		display: flex;
+      	}
+
+      	article{
+      		flex: 1 200px;
+      	}
+
+      	article:nth-of-type(3){
+      		flex: 3 200px;
+      		display: flex;
+      		flex-flow: column;
+      	}
+
+      	article:nth-of-type(3) div:first-child{
+      		flex:1 100px;
+      		display: flex;
+      		flex-flow: row wrap;
+      		align-items: center;
+      		justify-content: space-around;
+      	}
+
+      	button{
+      		flex: 1 auto;
+      		margin: 5px;
+      		line-height: 1.5;
+			font-size: 18px;
+      	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Complex flexbox example</h1>
+	</header>
+	<main>
+		<section>
+			<article>
+				<h1>First article</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</article>
+
+			<article>
+				<h1>Second article</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</article>
+			<article>
+				
+				<div>
+			      <button>Smile</button>
+			      <button>Laugh</button>
+			      <button>Wink</button>
+			      <button>Shrug</button>
+			      <button>Blush</button>
+    			</div>
+    			<div>
+    				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>    				
+    			</div>
+				<div>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+					</p>
+				</div>
+				
+			</article>
+		</section>
+	</main>
+</body>
+</html>
