@@ -1,102 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sample RD</title>
-	<style type="text/css">
-		*{
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
 
-		.header{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			border: 1px solid red;
-		}	
+th, td {
+  text-align: left;
+  padding: 8px;
+}
 
-		.header .content{
-			display: flex;
-		}
-	</style>
-	
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
 </head>
 <body>
-	<center><h1>Header section</h1></center>
-	<div>
-		
-	</div>
-	<section class="header">
-		<div class="logo">Shop logo</div>
-		
-			<ul class="content">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Infrastructure</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Awards</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		<div class="button">
-			<button>Login</button>
-		</div>
-	</section>
 
-	<section class="about">
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-	</section>
+<h2>Responsive Table</h2>
+<p>If you have a table that is too wide, you can add a container element with overflow-x:auto around the table, and it will display a horizontal scroll bar when needed.</p>
+<p>Resize the browser window to see the effect. Try to remove the div element and see what happens to the table.</p>
 
-<section class="about">
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-	</section>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+  </table>
+</div>
+
 </body>
 </html>
