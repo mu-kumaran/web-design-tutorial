@@ -1,0 +1,165 @@
+/*General setup*/
+
+html,body{
+	margin: 0;
+	padding: 0;
+/*	box-sizing: border-box;*/
+	font-family: sans-serif;
+}
+
+html{
+	background-color: lightgray;
+}
+
+body{
+	width: 70%;
+	margin: 0 auto;
+	background-color: lightgray;
+}
+
+header, main, footer{
+	background-color: #3bde1a;
+}
+
+nav,article,aside{
+	background-color: #71f457;
+}
+
+nav,article,aside{
+	margin: 8px;
+}
+
+header,main{
+	margin-bottom: 8px;
+}
+
+/*Header section*/
+
+.title h1, .logo, header, nav{
+/*	border: 1px solid red;*/
+}
+
+
+p{
+	text-align: justify;
+}
+
+/*Header - title section*/
+header{
+	height:180px;
+}
+img{
+	width: 80px;
+	height: 80px;
+}
+.logo{
+	flex: 1;
+	text-align: center;
+}
+.title{
+/*	border: 1px solid blue;*/
+	display: flex;
+	flex-flow: row wrap;
+	align-items:center;
+	justify-content: space-around;
+	margin: 8px;
+}
+
+.title h1{
+	font-size: 35px;
+	flex: 8;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5px ;
+/*	text-shadow: 2px 2px 10px black;;*/
+}
+
+/*Header - navigation section*/
+
+nav ul{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	height: 50px;
+}
+
+nav ul li{
+/*	border: 1px solid blue;*/
+	list-style: none;
+	flex: auto;
+/*	text-align: center;*/
+	padding: 10px;
+	margin: 2px;
+	font-size: 20px;
+}
+
+nav li a{
+	text-decoration: none;
+	color: black;
+}
+
+/*Main section*/
+
+main,article,aside{
+/*	border: 1px solid red;*/
+}
+
+main{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+article{
+	flex: 5;
+}
+
+aside{
+	flex: 2;
+}
+
+/*Main - article section*/
+
+article h2{
+/*	border: 1px solid blueviolet;*/
+	text-align: center;
+	text-transform: uppercase;
+}
+
+article p, article h2{
+	padding: 10px;
+	margin: 8px;
+
+}
+
+/*Main - aside section*/
+aside h2{
+/*	border: 1px solid blueviolet;*/
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+	margin: 8px;
+}
+
+.pictures{
+/*	border: 1px solid blueviolet;*/
+	text-align: center;
+	padding: 5px;
+	margin: 2px;
+}
+
+/*Footer section*/
+
+footer{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	height:125px;
+/*	border: 1px solid red;*/
+}
+
+footer p{
+/*	border: 1px solid red;*/
+	padding: 10px;
+	margin:8px;
+}
