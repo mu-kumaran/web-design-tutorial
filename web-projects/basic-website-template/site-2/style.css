@@ -77,15 +77,21 @@ img{
 
 /*Navigation section*/
 
+@media screen and (max-width:900px)
+{
+	nav ul{
+		overflow:scroll;
+	}
+}
+
 nav ul{
 	display: flex;
-	flex-flow: row wrap;
+/*	flex-flow: row wrap;*/
 	align-items: center;
 	justify-content: space-around;
 	height: 50px;
 	padding: 8px;
 	margin: 10px;
-/*	overflow:scroll;*/
 }
 
 nav ul li{
