@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function library example</title>
+	<style type="text/css">
+		input {
+	      font-size: 2em;
+	      margin: 10px 1px 0; 
+    	}
+	</style>
+</head>
+<body>
+	<input type="text" class="numberInput">
+	<p></p>
+	<div id="res"></div>
+
+	<script type="text/javascript">
+		const input = document.querySelector(".numberInput")
+		const para = document.querySelector("p")
+		function squared(num) {
+		  return num * num;
+		}
+
+		function cubed(num) {
+		  return num * num * num;
+		}
+
+		function factorial(num) {
+		  if (num < 0) return undefined;
+		  if (num === 0) return 1;
+		  let x = num - 1;
+		  while (x > 1) {
+		    num *= x;
+		    x--;
+		  }
+		  return num;
+		}
+
+		 input.addEventListener("change",(event)=>{
+		 	const num = parseFloat(input.value);
+		  	if(isNaN(num)){
+		  		para.textContent = "Enter a valid number"
+		  	}
+		  	else{
+		  		para.textContent = `${num} squared is ${squared(num)}.`;
+		  		para.textContent += `${num} cubed is ${cubed(num)}.`;
+		  		para.textContent += `${num} factorial is ${factorial(num)}.`;
+
+		  		document.getElementById("res").innerHTML = num + " squared is " +squared(num) + "<br>"+
+		  		num + " cubed is " +cubed(num) + "<br>"+ num + " factorial is " +factorial(num) + "<br>";
+		  	}
+		  });
+	</script>
+</body>
+</html>
