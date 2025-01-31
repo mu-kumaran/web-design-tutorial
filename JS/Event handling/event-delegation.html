@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event delegation</title>
+	<style type="text/css">
+		.container{
+			border:1px solid black;
+			display: grid;
+			grid-template-columns: repeat(4,1fr);
+			grid-auto-rows: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Event delegation</h1>
+	<h4>(Event listener on parent element instead of setting it on each individual element)</h4>
+	<h4>(Click inside the color box)</h4>
+	<div class="container">
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+		<div class="tile"></div>
+	</div>
+
+	<script type="text/javascript">
+
+		const container = document.querySelector(".container")
+
+		function random(number){
+			return Math.floor(Math.random()*number)
+		}
+
+		function changeBG(){
+			const bgColor = `rgb(${random(255)} ${random(255)} ${random(255)})`
+			return bgColor;
+		}
+
+		container.addEventListener("click",(event)=>{
+			event.target.style.backgroundColor = changeBG();
+		})
+	</script>
+</body>
+</html>

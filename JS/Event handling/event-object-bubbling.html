@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event-objects-bubbling</title>
+	<style type="text/css">
+		div{
+			border: 1px solid black;
+			height: 100px;
+		}
+
+		button{
+			padding: 10px;
+			font-size: 1.3rem;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Event objects and bubbling</h1>
+	<h4>Event objects - target and currentTarget</h4>
+	<h4>Event bubbling - Event bubbles up from innermost child element that was clicked in nested elements and propogates to parent element</h4>
+	<div>
+		<button>Click</button>
+	</div>
+	<!-- <p></p> -->
+
+	<script type="text/javascript">
+		const body = document.body
+		const div = document.querySelector("div")
+		const button = document.querySelector("button")
+		// const para = document.querySelector("p")
+
+		function handleClick(event){
+			const para = document.createElement("p");
+			body.appendChild(para)
+			para.textContent = `Target: ${event.target.tagName}, Current Target: ${event.currentTarget.tagName}`;
+			// para.textContent += `Target: ${event.target.tagName}, Current Target: ${event.currentTarget.tagName}\n`;
+
+		} 
+
+		body.addEventListener("click",handleClick)
+		div.addEventListener("click",handleClick)
+		button.addEventListener("click",handleClick)
+	</script>
+</body>
+</html>

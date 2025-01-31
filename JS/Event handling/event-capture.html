@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event capture</title>
+	<style type="text/css">
+		div{
+			border: 1px solid black;
+			height: 100px;
+		}
+
+		button{
+			padding: 10px;
+			font-size: 1.3rem;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Event capture</h1>
+	<h4>It's a reverse of event bubbling, that is event bubbles up from outermost parent element and propogates to child element in nested elements</h4>
+	<div>
+		<button>Click</button>
+	</div>
+	<!-- <p></p> -->
+
+	<script type="text/javascript">
+		const body = document.body
+		const div = document.querySelector("div")
+		const button = document.querySelector("button")
+		// const para = document.querySelector("p")
+
+		function handleClick(event){
+			const para = document.createElement("p");
+			body.appendChild(para)
+			para.textContent = `Target: ${event.target.tagName}, Current Target: ${event.currentTarget.tagName}`;
+			// para.textContent += `Target: ${event.target.tagName}, Current Target: ${event.currentTarget.tagName}\n`;
+
+		} 
+
+		body.addEventListener("click",handleClick,{capture: true})
+		div.addEventListener("click",handleClick,{capture: true})
+		button.addEventListener("click",handleClick,{capture: true})
+	</script>
+</body>
+</html>
