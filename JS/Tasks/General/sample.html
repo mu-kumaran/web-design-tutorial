@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Task</title>
+</head>
+<body>
+
+	<h2>Get Inputs (Enter the number)</h2>
+	n1: <input type="text" name="" id="n1"><br><br>
+	n2: <input type="text" name="" id="n2"><br><br>
+	<button>Result</button>
+	<div id="res"></div>
+
+	<script type="text/javascript">
+ 		
+ 		function count_digits(num){
+ 			let count = 0; 
+ 			do{
+ 				if(Math.floor(num/10) >= 1){
+ 					num = Math.floor(num/10);
+ 					count++;
+ 				}
+ 				else{
+ 					count++;
+ 					break;
+ 				}
+ 			}while(count>0)
+
+ 			return count;	
+ 		};
+
+ 		function return_array(num){
+
+ 			let arr = [];
+ 			do{
+ 				if(Math.floor(num/10) >= 1){
+ 					arr.push(num%10);
+ 					num = Math.floor(num/10);
+ 				}
+ 				else{
+ 					arr.push(num%10);
+ 					break;
+ 				}
+ 			}while(arr.length>0)
+ 			return arr;
+ 		}
+ 		 
+ 		but = document.querySelector("button");
+ 		but.addEventListener("click",()=>{
+ 			let m = parseInt(document.getElementById("n1").value);
+ 			let n = parseInt(document.getElementById("n2").value);
+
+ 			let arr1 = return_array(m).sort();
+ 			let arr2 = return_array(n).sort();
+ 			console.log("n1: "+m)
+ 			console.log("n2: "+n)
+ 			console.log(0%10)
+ 			console.log("count n1 = "+count_digits(m));
+ 			console.log("count n2 = "+count_digits(n));
+ 			console.log("arr n1 = "+arr1);
+ 			console.log("arr n2 = "+ arr2);
+ 			console.log("sort arr n1 = "+arr1.sort());
+ 			console.log("sort arr n2 = "+ arr2.sort());
+ 			let res = [];
+ 			if(arr1.length>arr2.length){
+ 				
+ 				for(let i=0;i<arr1.length;i++)
+ 				{
+ 					if(i<arr2.length)
+ 						res.push(arr1[(arr1.length-1)-i]+arr2[i])
+ 					else
+ 						res.push(arr1[(arr1.length-1)-i]+0)
+ 				}
+ 			}else if(arr1.length<arr2.length){
+
+ 				for(let i=0;i<arr2.length;i++)
+ 				{
+ 					if(i<arr1.length)
+ 						res.push(arr1[(arr1.length-1)-i]+arr2[i])
+ 					else
+ 						res.push(0+arr2[i])
+ 				}
+
+ 			}else{
+ 				for(let i=0;i<arr1.length;i++)
+ 				{
+ 					res.push(arr1[(arr1.length-1)-i]+arr2[i]);
+ 				}
+
+ 			}
+
+ 			console.log("res = "+ res);
+ 		});
+	</script>
+
+</body>
+</html>
