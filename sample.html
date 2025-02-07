@@ -5,34 +5,17 @@
 <title>simple form validation</title>
 </head>
 <body>
-  <h1>Simple form validation using preventDefault</h1>
-  <form>
-    <label for="fname">First Name: </label>
-    <input id="fname" type="text">
-    <br><br>
-
-    <label for="lname">Last Name: </label>
-    <input id="lname" type="text">
-    <br><br>
-
-    <input type="submit" id="submit">
-  </form>
-
-  <p></p>
+ 
 
   <script type="text/javascript">
-     const form = document.querySelector("form")
-     const fname = document.getElementById("fname")
-     const lname = document.querySelector("#lname")
-     const para = document.querySelector("p")
-     
-     form.addEventListener("submit",(event)=>{
-        if(fname.value === "" || lname.value === ""){
-            event.preventDefault()
-            para.textContent = "You need to fill in both the names"
-        }
-        
-     })
+    let person = {
+        name: ["Bob","Smith"],
+        age: 32
+    };
+
+    function logProp(personName){
+        console.log(person[personName]);
+    }
 
   </script>
 </body>
