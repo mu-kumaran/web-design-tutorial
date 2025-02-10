@@ -24,7 +24,11 @@
             console.log(`Hello, I am ${this.name[0]}.`)
           },
           logProperty(props){
-            console.log(person[props]);
+            console.log(person[props]); 
+            /*Here person.props is not the right way to retrieve properties of object person, 
+              which leads to error called 'undefined'. So bracket notation is the right way to retrieve 
+              the properties of the object
+            */
           }
 
         };
