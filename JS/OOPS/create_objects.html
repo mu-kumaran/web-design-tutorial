@@ -20,6 +20,23 @@
                 console.log(`Hello! this is ${name}`);
             };
        }
+
+       //Example program given below
+
+       function objCat(name,breed,color){
+        this.name = name;
+        this.breed = breed;
+        this.color = color;
+        this.greeting = function(){
+             console.log(`Hello, said ${ this.name } the ${ this.breed }.`)
+            }
+        }
+
+        const cat = new objCat('Bertie','Cynric','white');
+        const cat2 = new  objCat('Elfie','Aphrodite Giant','ginger');
+
+        cat.greeting();
+        cat2.greeting();
 </script>
 </head>
 

@@ -5,36 +5,26 @@
 <title>simple form validation</title>
 <script type="text/javascript">
        
-       function createObjectUsingfunction(name){
-            const obj = {};
-            obj.name = name;
-            obj.introduceSelf =function(){
-                console.log(`Hello! this is ${name}`);
-            };
-            return obj;
-       }
+  function objCat(name,breed,color){
+    this.name = name;
+    this.breed = breed;
+    this.color = color;
+    this.greeting = function(){
+         console.log(`Hello, said ${ this.name } the ${ this.breed }.`)
+    }
+  }
 
-       function createObjectUsingConstructor(name){
-            this.name = name;
-            this.introduceSelf = function(){
-                console.log(`Hello! this is ${name}`);
-            };
-       }
+const cat = new objCat('Bertie','Cynric','white');
+const cat2 = new  objCat('Elfie','Aphrodite Giant','ginger');
+
+cat.greeting();
+cat2.greeting();
 </script>
 </head>
 
 <body>
     
-    <h1>Creating objects using function and constructor</h1>
-    <p>In console, <br> <u>create objects using function by enter the code below :</u> <br>
-        const obj_manoj = createObjectUsingfunction("manoj"); <br>
-        obj_manoj.name; <br>
-        obj_manoj.introduceSelf() <br> <br>
-        <u>create objects using constructor by enter the code below:</u> <br>
-        const obj_muthu = &nbsp; new &nbsp; createObjectUsingConstructor("muthu"); <br>
-        obj_muthu.name; <br>
-        obj_muthu.introduceSelf();<br>
-     </p>
+    
      
 </body>
 </html>
