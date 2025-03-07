@@ -130,3 +130,52 @@ nav ul li a{
 	padding: 5px;
 	font-size: 16px;
 }
+
+/* Products section - styling */
+/* Products - heading */
+.products{
+	border: 1px solid blue;
+	margin: 50px 0;
+	text-align: center;
+}
+
+.products h2{
+	display: inline-block;
+	font-size: 28px;
+	font-weight: 400;
+	margin-bottom: 50px;
+	border-bottom: 2px solid #fbc531;
+}
+
+/* Products - container */
+.products .row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	flex-wrap: wrap;
+
+	margin: 0 75px;
+	text-align: left;
+	margin-top: 15px;
+}
+
+.products .row img{
+	height: 300px;
+	width: 275px;
+	margin-bottom: 20px;
+}
+
+.products .product{
+	margin-bottom: 50px;
+	cursor: pointer;
+}
+
+.products .row .product h4{
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.products .row .product p{
+	font-size: 16px;
+}
