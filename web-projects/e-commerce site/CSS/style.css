@@ -67,6 +67,10 @@ nav ul li a{
 	margin: 30px;
 }
 
+.hero{
+	text-align: center;
+}
+
 .column h1{
 	font-size: 50px;
 	line-height: 1.3;
@@ -133,7 +137,7 @@ nav ul li a{
 	font-size: 16px;
 }
 
-/* Products section - styling */
+/* Products & deals section - styling */
 /* Products - heading */
 .products{
 	margin: 50px 0;
@@ -323,7 +327,9 @@ nav ul li a{
 
 /* Responsive design */
 /* RWD - Navigation section */
-@media only screen and (max-width:768px){
+@media screen and (max-width:768px)
+{
+	/* Header section */
 	nav ul{
 		display: none;
 	}
@@ -359,5 +365,14 @@ nav ul li a{
 
 	.button{
 		margin-top: 30px;
+	}
+
+	/* Categories section */
+	.categories .row{
+		flex-direction: column;
+	}
+
+	.categories .row .p{
+		margin-bottom: 40px;
 	}
 }

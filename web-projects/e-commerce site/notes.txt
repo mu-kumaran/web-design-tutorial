@@ -50,22 +50,3 @@ examples:
 
 
 
-/* Responsive design */
-/* RWD - Navigation section */
-@media only screen and (max-width:768px){
-	nav ul{
-		display: none;
-	}
-
-	.navbar .menu-icon{
-		display: block;
-	}
-
-	.main{
-		height: auto;
-		flex-direction: column;
-		text-align: center;
-	}
-
-	
-}
