@@ -1,0 +1,71 @@
+Responsive web design
+-----------------------
+syntax:
+-------
+
+@media media-type and (media-feature-rule)
+{
+    CSS rules go here......
+}
+
+eg:
+@media only screen and (max-width:breakpoint (eg.400px))
+{
+    CSS rules.....
+}
+
+Common break points
+--------------------
+1. smaller smartphones - 0 to 480 px width
+2. Tablets and larger smartphones - 481 to 768 px width
+3. laptops - 769 to 1279 px width
+4. Desktop - 1280+ px width
+
+examples:
+----------
+1. Desktop:
+------------
+@media screen and {min-width:1024px}
+{
+    flex-wrap: wrap;
+    width: 30%
+}
+
+2.Tablets:
+-----------
+@media screen and {min-width:769px} and {max-width:1023px}
+{
+    flex-wrap: wrap;
+    width: 48-50%
+}
+
+3.smartphones:
+----------------
+@media screen and {max-width:767px}
+{
+    flex-wrap: wrap;
+    width: 100%
+}
+
+
+
+
+/* Responsive design */
+/* RWD - Navigation section */
+@media only screen and (max-width:768px){
+	nav ul{
+		display: none;
+	}
+
+	.navbar .menu-icon{
+		display: block;
+	}
+
+	.main{
+		height: auto;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	
+}

@@ -21,15 +21,10 @@ body{
 /*Styling the navigation bar*/
 .navbar{
 	display: flex;
-	align-items: center;
+/*	align-items: center;*/
 	justify-content: space-between;
 	padding: 20px;
-}
-
-.navbar .menu-icon{
-	display: none;
-	width: 28px;
-	margin-left: 20px;
+	border: 2px solid orange;
 }
 
 .navbar .logo h2{
@@ -60,6 +55,7 @@ nav ul li a{
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
+	border: 2px solid blue ;
 }
 
 .column{
@@ -99,9 +95,11 @@ nav ul li a{
 .categories{
 	margin: 70px 0;
 	text-align: center;
+	border: 2px solid orange;
 }
 
 .categories h2{
+	border: 1px solid blue;
 	display: inline-block;
 	font-size: 28px;
 	font-weight: 400;
@@ -136,6 +134,7 @@ nav ul li a{
 /* Products section - styling */
 /* Products - heading */
 .products{
+	border: 1px solid blue;
 	margin: 50px 0;
 	text-align: center;
 }
@@ -183,6 +182,7 @@ nav ul li a{
 
 /* Exclusive products section - styling */
 .offer{
+	border: 1px solid blue;
 	padding: 30px 0;
 	background: radial-gradient(#fff,#74b9ff);
 }
@@ -215,6 +215,7 @@ nav ul li a{
 
 /* Customer reviews section - styling */
 .reviews{
+	border: 1px solid blue;
 	margin-top: 50px;
 	text-align: center;
 }
@@ -271,6 +272,7 @@ nav ul li a{
 
 /* Footer section - styling */
 .footer{
+	border: 1px solid blue;
 	width: 100%;
 	margin-top: 50px;
 	background-color: #74b9ff;
@@ -316,48 +318,8 @@ nav ul li a{
 
 /* Copyright section - styling */
 .copyright{
+	border: 1px solid blue;
 	text-align: center;
 	margin: 10px;
 	color: #555;
-}
-
-/* Responsive design */
-/* RWD - Navigation section */
-@media only screen and (max-width:768px){
-	nav ul{
-		display: none;
-	}
-
-	.navbar .menu-icon{
-		display: block;
-	}
-
-	.main{
-		height: auto;
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.header{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	
-	.column{
-		margin: 25px;
-	}
-
-	.column h1{
-		font-size: 45px;
-		margin-bottom: 25px;
-	}
-
-	.column img{
-		height: 250px;
-		width: 350px;
-	}
-
-	.button{
-		margin-top: 30px;
-	}
 }
