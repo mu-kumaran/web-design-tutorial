@@ -46,7 +46,20 @@ examples:
     flex-wrap: wrap;
     width: 100%
 }
+-------------------------------------------------------------------------------------------------------------------------
+hover effect:
+--------------
+nav ul li a:hover{
+    border-bottom : 2px solid blue;
+}
 
+.reviews .review:hover{
+    box-shadow: none
+}
 
+.products .product:hover{
+   transition: transform 0.5s;
+   transform:translateY(-5px)
+}
 
 

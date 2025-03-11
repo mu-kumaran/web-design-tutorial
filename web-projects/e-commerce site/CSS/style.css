@@ -46,11 +46,17 @@ nav ul li{
 	display: inline;
 	margin-right: 20px;
 	font-size: 20px;
+	padding: 20px;
 }
 
 nav ul li a{
 	text-decoration: none;
 	color: black;
+	
+}
+
+nav ul li a:hover{
+	border-bottom: 2px solid #fbc531;
 }
 
 /* Styling the hero section */
@@ -172,6 +178,7 @@ nav ul li a{
 }
 
 .products .product{
+	/* transition: transform 0.5s; */
 	margin-bottom: 50px;
 	cursor: pointer;
 }
@@ -185,6 +192,10 @@ nav ul li a{
 	font-size: 16px;
 }
 
+.products .product:hover{
+	transition: transform 0.5s;
+	transform:translateY(-5px)
+ }
 /* Exclusive products section - styling */
 .offer{
 	padding: 30px 0;
@@ -238,7 +249,6 @@ nav ul li a{
 	margin: 0 75px;
 	text-align: center;
 	margin-top: 15px;
-	/* border: 1px solid blue; */
 }
 
 .reviews .review{
@@ -271,6 +281,10 @@ nav ul li a{
 	color: #555;
 	font-size: 18px;
 	margin-top: 12px;
+}
+
+.reviews .review:hover{
+	box-shadow: none;
 }
 
 /* Footer section - styling */
@@ -329,6 +343,7 @@ nav ul li a{
 /* RWD - Navigation section */
 @media screen and (max-width:768px)
 {
+
 	/* Header section */
 	nav ul{
 		display: none;
@@ -374,5 +389,42 @@ nav ul li a{
 
 	.categories .row .p{
 		margin-bottom: 40px;
+	}
+
+	/* Exclusive offer section */
+	.offer .offer-container{
+		flex-direction: column;
+		margin: 60px 25px 0px 35px;
+	}
+
+	.offer ,.offer-container .offer-image img{
+		margin-bottom: 60px;
+	}
+
+	.offer .offer-container #offer-button{
+		display: block;
+		width: 175px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	/* Customer reviews section */
+	.reviews .row{
+		flex-direction: column;
+		margin: 0 40px;
+	}
+
+	.reviews .review{
+		margin-bottom: 50px;
+	}
+
+	/* Footer section */
+	.footer{
+		flex-direction: column;
+		padding: 10px 25px;
+	}
+
+	.footer p{
+		font-size: 18px;
 	}
 }
