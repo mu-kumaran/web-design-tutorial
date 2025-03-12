@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Simple internal CSS for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        main {
+            flex: 3;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            height: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+        }
+
+        .blog-post h2 {
+            margin-top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Blog</h1>
+        <p>Welcome to my personal blog</p>
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+        <!-- Side Navigation Bar -->
+        <nav>
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Health</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Section -->
+        <main>
+            <div class="blog-post">
+                <h2>First Blog Post</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit auctor urna, et bibendum nunc. Sed vitae turpis ac eros luctus aliquam.</p>
+            </div>
+            <div class="blog-post">
+                <h2>Another Blog Post</h2>
+                <p>Vivamus a ligula tincidunt, feugiat risus ac, malesuada ligula. Donec euismod malesuada gravida. Cras id sollicitudin nunc, id sodales purus.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
